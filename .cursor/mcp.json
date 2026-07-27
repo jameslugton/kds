@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "wordpress": {
+      "url": "https://blog.lugton.co.uk/wp-json/easy-mcp-ai/v1/mcp",
+      "headers": {
+        "Authorization": "Bearer ${env:WP_API_TOKEN}"
+      }
+    }
+  }
+}

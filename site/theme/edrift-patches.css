@@ -1,0 +1,270 @@
+/**
+ * Security e-drift — marketing / trust patches
+ * Append to wp-content/themes/security-edrift/assets/edrift.css
+ * then bump the theme / asset version (e.g. 1.5.5).
+ */
+
+/* Primary CTA button */
+.edrift-btn--primary {
+	padding: 0.65rem 1.15rem;
+	border-radius: 999px;
+	background: var(--edrift-accent);
+	color: #fff !important;
+	box-shadow: var(--edrift-shadow);
+}
+
+.edrift-btn--primary:hover {
+	background: var(--edrift-accent-hover);
+	color: #fff !important;
+	transform: translateY(-1px);
+	box-shadow: var(--edrift-shadow-hover);
+}
+
+.edrift-home-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.65rem;
+	margin: 1.1rem 0 0;
+}
+
+/* Full-bleed style hero with atmospheric image */
+.edrift-home-hero--split {
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+	min-height: clamp(16rem, 42vw, 22rem);
+	border: 0;
+	border-radius: calc(var(--edrift-radius) + 4px);
+	background-color: #143848;
+	box-shadow: var(--edrift-shadow-hover);
+}
+
+.edrift-home-hero--split::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: var(--edrift-hero-image);
+	background-size: cover;
+	background-position: center;
+	opacity: 0.42;
+	transform: scale(1.02);
+}
+
+.edrift-home-hero--split::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(105deg, rgba(16, 36, 44, 0.92) 0%, rgba(16, 36, 44, 0.78) 48%, rgba(16, 36, 44, 0.35) 100%);
+}
+
+.edrift-home-hero--split .edrift-home-hero__copy {
+	position: relative;
+	z-index: 1;
+	max-width: 36rem;
+	padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.edrift-home-hero__brand {
+	margin: 0 0 0.65rem;
+	font-family: var(--edrift-font-display);
+	font-size: clamp(2rem, 5vw, 2.85rem);
+	font-weight: 600;
+	line-height: 1.1;
+	letter-spacing: -0.02em;
+	color: #f7faf9;
+}
+
+.edrift-home-hero--split .edrift-home-hero__title {
+	margin: 0 0 0.65rem;
+	font-family: var(--edrift-font-ui);
+	font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+	font-weight: 500;
+	line-height: 1.45;
+	color: rgba(247, 250, 249, 0.92);
+}
+
+.edrift-home-hero--split .edrift-tagline {
+	margin: 0;
+	color: rgba(247, 250, 249, 0.78);
+	font-size: 1rem;
+	max-width: 32rem;
+}
+
+.edrift-home-hero--split .edrift-btn--soft {
+	background: rgba(255, 255, 255, 0.12);
+	color: #f7faf9;
+}
+
+.edrift-home-hero--split .edrift-btn--soft:hover {
+	background: #fff;
+	color: var(--edrift-accent-hover);
+}
+
+/* Subscribe form (replace inline styles) */
+.edrift-subscribe {
+	margin: 1.25rem 0;
+	padding: 1.15rem 1.2rem;
+	border-left: 3px solid var(--edrift-accent);
+	background: var(--edrift-surface);
+	border-radius: 0 var(--edrift-radius-sm) var(--edrift-radius-sm) 0;
+}
+
+.edrift-subscribe__title {
+	margin: 0 0 0.35rem;
+}
+
+.edrift-subscribe__desc {
+	margin: 0 0 0.75rem;
+	color: var(--edrift-muted);
+	font-size: 0.95rem;
+}
+
+.edrift-subscribe__fields {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	margin: 0;
+	position: relative;
+}
+
+.edrift-subscribe__fields input[type="email"] {
+	flex: 1;
+	min-width: 180px;
+	padding: 0.55rem 0.7rem;
+	border: 1px solid var(--edrift-border);
+	border-radius: 8px;
+}
+
+.edrift-subscribe__fields button {
+	padding: 0.55rem 1rem;
+	background: var(--edrift-accent);
+	color: #fff;
+	border: 0;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.edrift-subscribe__fields button:hover {
+	background: var(--edrift-accent-hover);
+}
+
+.edrift-subscribe .edrift-hp {
+	position: absolute !important;
+	left: -10000px !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+}
+
+.edrift-subscribe-msg {
+	margin: 0.5rem 0 0;
+	font-size: 0.9rem;
+	color: var(--edrift-muted);
+}
+
+/* Site footer block */
+.edrift-site-footer {
+	text-align: center;
+	padding: 1.5rem 1rem 0.75rem;
+}
+
+.edrift-site-footer__brand {
+	margin: 0;
+	font-family: var(--edrift-font-display);
+	font-size: 1.15rem;
+	font-weight: 600;
+	color: var(--edrift-text);
+}
+
+.edrift-site-footer__tagline {
+	margin: 0.35rem 0 0;
+	font-size: 0.95rem;
+	color: var(--edrift-muted);
+}
+
+.edrift-site-footer__nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.35rem 0.15rem;
+	margin: 0.9rem 0 0;
+}
+
+.edrift-site-footer__nav a {
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: var(--edrift-accent);
+	text-decoration: none;
+	padding: 0.15rem 0.4rem;
+}
+
+.edrift-site-footer__nav a:hover {
+	text-decoration: underline;
+}
+
+.edrift-site-footer__sep {
+	color: var(--edrift-muted-light);
+	padding: 0 0.1rem;
+}
+
+.edrift-site-footer__meta {
+	margin: 0.75rem 0 0;
+	font-size: 0.8125rem;
+	color: var(--edrift-muted);
+}
+
+.edrift-site-footer__meta a {
+	color: var(--edrift-muted);
+}
+
+.edrift-site-footer__meta a:hover {
+	color: var(--edrift-accent);
+}
+
+@media (max-width: 767px) {
+	.edrift-home-hero--split {
+		min-height: 18rem;
+	}
+
+	.edrift-home-hero--split::after {
+		background: linear-gradient(180deg, rgba(16, 36, 44, 0.88) 0%, rgba(16, 36, 44, 0.78) 100%);
+	}
+}
+
+/* Subtle entrance motion */
+@media (prefers-reduced-motion: no-preference) {
+	.edrift-home-hero--split .edrift-home-hero__copy {
+		animation: edrift-hero-in 0.7s ease-out both;
+	}
+
+	.edrift-topic-chip {
+		animation: edrift-rise 0.55s ease-out both;
+	}
+
+	.edrift-topic-chip:nth-child(2) { animation-delay: 0.06s; }
+	.edrift-topic-chip:nth-child(3) { animation-delay: 0.12s; }
+	.edrift-topic-chip:nth-child(4) { animation-delay: 0.18s; }
+
+	.edrift-series-card {
+		animation: edrift-rise 0.6s ease-out both;
+	}
+
+	.edrift-series-card:nth-child(2) { animation-delay: 0.08s; }
+}
+
+@keyframes edrift-hero-in {
+	from { opacity: 0; transform: translateY(10px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes edrift-rise {
+	from { opacity: 0; transform: translateY(8px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+/* Homepage: avoid double brand (Kadence page title + hero brand) */
+.home .entry-hero.page-hero-section {
+	display: none;
+}

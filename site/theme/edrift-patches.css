@@ -417,7 +417,6 @@
 }
 
 .edrift-feature__sep {
-	margin: 0 0.3rem;
 	color: rgba(28, 36, 40, 0.28);
 }
 
@@ -432,9 +431,13 @@
 	gap: var(--edrift-space-4);
 }
 
+/* Override theme card chrome (border/radius/shadow) — editorial rules, not boxes */
 .edrift-series-card {
+	display: block;
 	padding: var(--edrift-space-3) 0 0;
+	border: 0;
 	border-top: 2px solid rgba(42, 111, 127, 0.28);
+	border-radius: 0;
 	background: transparent;
 	box-shadow: none;
 }
@@ -442,6 +445,7 @@
 .edrift-series-card:hover {
 	transform: none;
 	box-shadow: none;
+	background: transparent;
 }
 
 .edrift-series-card__eyebrow {
@@ -500,10 +504,10 @@
 }
 
 .edrift-toolkit__list li {
-	padding: 0.8rem 0;
+	padding: 0.85rem 0;
 	border-bottom: 1px solid var(--edrift-border);
 	font-size: 0.95rem;
-	line-height: 1.5;
+	line-height: 1.45;
 	color: var(--edrift-muted);
 }
 
@@ -512,6 +516,7 @@
 }
 
 .edrift-toolkit__list a {
+	display: inline-block;
 	color: var(--edrift-text);
 	text-decoration: none;
 }
@@ -519,6 +524,25 @@
 .edrift-toolkit__list a:hover {
 	color: var(--edrift-accent);
 	text-decoration: underline;
+}
+
+.edrift-toolkit__meta {
+	display: block;
+	margin-top: 0.2rem;
+	font-size: 0.9rem;
+	line-height: 1.45;
+	color: var(--edrift-muted);
+}
+
+.edrift-feature__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem 0.85rem;
+	margin: 0;
+}
+
+.edrift-feature__actions .edrift-feature__sep {
+	display: none;
 }
 
 /* ——— Subscribe ——— */
@@ -606,12 +630,37 @@
 }
 
 .edrift-author-band__links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem 0.75rem;
 	font-weight: 600;
+}
+
+.edrift-author-band__links .edrift-author-band__sep {
+	display: none;
 }
 
 .edrift-author-band__note {
 	font-size: 0.875rem;
 	color: var(--edrift-muted);
+}
+
+/* Home already has in-content brand footer — drop theme reader + bottom chrome */
+.home .edrift-reader-footer,
+.home .site-bottom-footer-wrap {
+	display: none !important;
+}
+
+/* GTranslate float covers mid-page; park bottom-right and clear last content */
+#gt_float_wrapper {
+	top: auto !important;
+	bottom: 1rem !important;
+	right: 0.75rem !important;
+	z-index: 40;
+}
+
+.home .edrift-site-footer {
+	padding-bottom: 4.25rem;
 }
 
 /* ——— Footer ——— */
@@ -827,8 +876,24 @@
 
 /* ——— Breakpoints ——— */
 @media (max-width: 719px) {
+	.home .entry-content > *:not(.edrift-hero):not(style) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
 	.edrift-hero {
 		min-height: 18.5rem;
+		width: 100%;
+		max-width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.home .entry-content .edrift-hero {
+		width: 100%;
+		max-width: 100%;
+		margin-left: 0;
+		margin-right: 0;
 	}
 
 	.edrift-hero::after {
@@ -844,9 +909,48 @@
 		width: 100%;
 	}
 
+	.edrift-audience {
+		margin-bottom: var(--edrift-space-4);
+	}
+
+	.edrift-paths,
+	.edrift-manifesto,
+	.edrift-feature,
+	.edrift-series-spotlight {
+		margin-bottom: var(--edrift-space-5);
+	}
+
+	.edrift-path {
+		padding: 0.85rem 0.9rem;
+	}
+
+	.edrift-path:hover {
+		transform: none;
+	}
+
 	.edrift-series-spotlight__grid {
 		grid-template-columns: 1fr;
-		gap: var(--edrift-space-4);
+		gap: var(--edrift-space-5);
+	}
+
+	.edrift-series-card {
+		padding-top: 1rem;
+	}
+
+	.edrift-feature__actions {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.45rem;
+	}
+
+	.edrift-author-band__links {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.45rem;
+	}
+
+	.edrift-subscribe {
+		padding: 1rem 0.95rem;
 	}
 
 	.edrift-subscribe__fields {
@@ -856,6 +960,27 @@
 	.edrift-subscribe__fields button,
 	.edrift-subscribe__fields input[type="email"] {
 		width: 100%;
+		min-width: 0;
+	}
+
+	.edrift-site-footer__brand {
+		font-size: 1.05rem;
+	}
+
+	.edrift-site-footer__nav {
+		gap: 0.25rem 0.15rem;
+		margin-top: 0.7rem;
+	}
+
+	.edrift-site-footer__sep {
+		display: none;
+	}
+
+	.edrift-site-footer__nav a {
+		padding: 0.45rem 0.55rem;
+		min-height: var(--edrift-tap);
+		display: inline-flex;
+		align-items: center;
 	}
 
 	.page-id-247 .entry-content .wp-block-image img,

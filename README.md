@@ -1,6 +1,6 @@
 # kds
 
-Ops and content package for **Security e-drift** ([blog.lugton.co.uk](https://blog.lugton.co.uk/)).
+Ops and content package for **Security e-Drift** ([blog.lugton.co.uk](https://blog.lugton.co.uk/)).
 
 ## Cursor ↔ WordPress MCP
 

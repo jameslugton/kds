@@ -1137,13 +1137,23 @@
 }
 
 .edrift-home-hero__brand {
-	margin: 0 0 0.65rem;
+	margin: 0 0 0.35rem;
 	font-family: var(--edrift-font-display);
 	font-size: clamp(2rem, 5vw, 2.85rem);
 	font-weight: 600;
 	line-height: 1.1;
 	letter-spacing: -0.02em;
 	color: #f7faf9;
+}
+
+/* Match logo lockup tagline */
+.edrift-home-hero__tagline-logo {
+	margin: 0 0 0.85rem;
+	font-family: var(--edrift-font-ui);
+	font-size: 0.95rem;
+	font-weight: 400;
+	letter-spacing: 0.01em;
+	color: rgba(247, 250, 249, 0.72);
 }
 
 .edrift-home-hero--split .edrift-home-hero__title {
@@ -1252,6 +1262,8 @@
 .edrift-site-footer__tagline {
 	margin: 0.35rem 0 0;
 	font-size: 0.95rem;
+	font-weight: 400;
+	letter-spacing: 0.01em;
 	color: var(--edrift-muted);
 }
 

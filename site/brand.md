@@ -1,40 +1,43 @@
-# Security e-drift brand notes
+# Security e-Drift brand notes
 
-## Name casing
+## Name casing (match the logo)
 
-Use **Security e-drift** everywhere in public copy (logo text, titles, about, footer).
+Public titles and wordmarks must match the logo:
 
-- Correct: `Security e-drift`, `e-drift`
-- Avoid: `e-Drift`, `E-Drift`, `eDrift`
+- **Security e-Drift**
+- Tagline under the mark: **the quiet compromise** (lowercase, as on the logo)
 
-Update the logo SVG/PNG wordmark to match when practical.
+Correct:
+- `Security e-Drift`
+- `e-Drift`
 
-## Consumer-facing tagline
+Avoid in titles/UI:
+- `Security e-drift`
+- `e-drift` (except in URLs/slugs and code identifiers)
 
-Prefer:
+WordPress / Yoast:
+- Site title → `Security e-Drift`
+- Homepage page title → `Security e-Drift`
+- Document titles can use `Security e-Drift — …`
 
-> Calm cybersecurity for everyday life
+URL slugs may stay kebab-case (`security-e-drift`) — that is fine.
+
+## Consumer-facing supporting line
+
+Under the logo title + “the quiet compromise”, use one short promise:
+
+> Calm cybersecurity for UK homes and small teams
 
 or
 
 > Clear guidance for UK homes and small teams — without the jargon.
 
-### “The quiet compromise”
+## Blog vs services
 
-Keep as an **About / brand-story** phrase (it explains the metaphor for security readers). Do **not** use it as the primary homepage or header tagline for general consumers — “compromise” is easily read as “breach.”
-
-Suggested About line:
-
-> We call the brand *e-drift* because threats often arrive as small compromises in routine — quiet moments where a habit drifts. Security e-drift shines a light on those moments.
+- **Security e-Drift** = free educational blog and resources
+- **Lugton** = IT support & security services (separate site / contact)
 
 ## Social / SEO
 
-- Fix or remove Yoast Twitter site handle `@drift` (placeholder). Use a real handle or leave blank.
-- Open Graph image: prefer a brand landscape (not only the square padlock) for link previews.
-
-## Blog vs services
-
-On About and footer, keep the distinction clear:
-
-- **Security e-drift** = free educational blog and resources
-- **Lugton** = IT support & security services (separate site / contact)
+- Fix or remove Yoast Twitter site handle `@drift` (placeholder).
+- Open Graph site name: `Security e-Drift`.

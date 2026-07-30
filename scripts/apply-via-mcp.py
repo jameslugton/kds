@@ -99,12 +99,14 @@ def main() -> int:
 
     home_html = (ROOT / "site/content/homepage.html").read_text(encoding="utf-8")
     privacy_html = (ROOT / "site/content/privacy-policy.html").read_text(encoding="utf-8")
+    # Logo-matched title
+    home_title = "Security e-Drift"
 
     # Tool names vary by plugin version — try common Easy MCP AI names.
     candidates = [
-        ("update_post", {"id": HOME_ID, "content": home_html}),
-        ("wp_update_post", {"ID": HOME_ID, "post_content": home_html}),
-        ("posts_update", {"id": HOME_ID, "content": home_html}),
+        ("update_post", {"id": HOME_ID, "title": home_title, "content": home_html}),
+        ("wp_update_post", {"ID": HOME_ID, "post_title": home_title, "post_content": home_html}),
+        ("posts_update", {"id": HOME_ID, "title": home_title, "content": home_html}),
     ]
 
     print("Attempting homepage update (page", HOME_ID, ")…")

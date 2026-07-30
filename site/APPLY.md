@@ -1,6 +1,8 @@
-# Apply Security e-drift marketing & trust fixes
+# Apply Security e-Drift marketing & trust fixes
 
 This package implements the review actions for [blog.lugton.co.uk](https://blog.lugton.co.uk/).
+
+**Brand title (match logo):** `Security e-Drift` — with tagline `the quiet compromise`.
 
 ## What’s included
 
@@ -49,8 +51,8 @@ If tool names differ, copy HTML from `site/content/` into wp-admin manually (Pag
 
 ### E. Brand
 
-1. Standardise **Security e-drift** casing (see `site/brand.md`).
-2. Keep “quiet compromise” on About only — not the homepage hero.
+1. Set WordPress **Site title** and Home page title to **Security e-Drift** (match the logo — see `site/brand.md`).
+2. Keep logo tagline **the quiet compromise** with the brand lockup on home/footer.
 
 ## Verify
 

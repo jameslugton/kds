@@ -102,8 +102,8 @@ function edrift_handle_subscribe( WP_REST_Request $request ) {
 		home_url( '/' )
 	);
 
-	$subject = 'Confirm your Security e-drift updates';
-	$body    = "Thanks for subscribing to Security e-drift.\n\n"
+	$subject = 'Confirm your Security e-Drift updates';
+	$body    = "Thanks for subscribing to Security e-Drift.\n\n"
 		. "Confirm your email (link expires conceptually when you confirm):\n"
 		. $confirm_url . "\n\n"
 		. "If you did not request this, ignore this message.\n";

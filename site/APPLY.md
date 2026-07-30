@@ -42,8 +42,12 @@ If tool names differ, copy HTML from `site/content/` into wp-admin manually (Pag
 
 ### B. Theme CSS
 
-1. In the child theme `security-edrift`, open `assets/edrift.css`.
-2. Append contents of `site/theme/edrift-patches.css`.
+**Preferred:** install `security-edrift2` (merged CSS already in `assets/edrift.css`, version `2.0.0`).
+
+Or on live `security-edrift`:
+
+1. Open `assets/edrift.css`.
+2. Append contents of `site/theme/edrift-patches.css` (or copy the merged file from `security-edrift2/assets/edrift.css`).
 3. Bump version in `style.css` and the `edrift.css?ver=` enqueue (e.g. `1.5.5`).
 
 ### C. Navigation & footer
@@ -67,13 +71,25 @@ If tool names differ, copy HTML from `site/content/` into wp-admin manually (Pag
 4. Users → James Lugton → bio: `Security e-Drift` casing.
 5. Hide/retire `.edrift-reader-footer` (CSS in patches does this); keep one footer system.
 
-### F. Theme file drops (Issues 1–3)
+### F. Theme package — Security e-Drift 2 (preferred)
+
+Installable child theme: `site/theme/security-edrift2/`  
+Upload zip: `site/theme/dist/security-edrift2.zip`
+
+Includes merged CSS (`assets/edrift.css` = base + patches), Stories template, and Yoast `@drift` strip.
+
+**Do not blind-activate on production** without overlaying live v1 PHP template-parts (series hubs, archive, etc.). See `site/theme/security-edrift2/README.md` and `COPY-FROM-V1.md`.
+
+Preferred cutover: copy live `security-edrift` → `security-edrift2` on the host, overlay this package, merge `functions.php`, then activate.
+
+### F2. Theme file drops onto live `security-edrift` (Issues 1–3, no rename)
 
 Child theme path: `wp-content/themes/security-edrift/` (not writable via MCP — copy via SFTP/file manager). Package: `site/theme/security-edrift/`.
 
 1. **Twitter `@drift` (Yoast):** Copy `functions-edrift-fixes.php` and append lines from `functions.php.append` into existing `functions.php`. Then **Yoast SEO → Settings → Social → Twitter** → delete `@drift` → Save. No correct handle exists in options/code.
 2. **Stories template:** Copy `page-stories.php`. Page **Stories** already exists at `/stories/` (id 1006). Assign template **Stories** under Page Attributes. Then **Appearance → Menus → Stories** → URL `/stories/` (do not change the menu URL from code).
 3. **Company field:** Was hardcoded honeypot HTML on Home + Resources (not a widget/shortcode). Removed and redeployed via `deploy-flagship.py`.
+4. **CSS:** Replace `assets/edrift.css` with the merged file from `security-edrift2/assets/edrift.css` (or append `edrift-patches.css`) and bump `?ver=`.
 
 ## Verify
 

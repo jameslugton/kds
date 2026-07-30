@@ -179,20 +179,21 @@ def main() -> int:
         m.tool(
             "wp_replace_in_post",
             {
-                "post_id": 838,
+                "id": 838,
+                "field": "post_content",
                 "search": "<strong>Remember this:</strong> <strong>Niche focus:</strong> AI + human risk + scams + small-business security. Start here, then pick one habit to practise.",
                 "replace": "<strong>Remember this:</strong> prefer AI as an advisor by default. Promote a tool to actor only with a narrow job — and a human brake.",
             },
         )
     )
-
-    # Also fix brand casing on AI hub intro if present
     m.tool(
         "wp_replace_in_post",
         {
-            "post_id": 838,
-            "search": "Security e-drift’s",
-            "replace": "Security e-Drift’s",
+            "id": 838,
+            "field": "post_content",
+            "search": "Security e-drift",
+            "replace": "Security e-Drift",
+            "max_replacements": 20,
         },
     )
 

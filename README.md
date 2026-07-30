@@ -12,13 +12,10 @@ export WP_API_TOKEN='your-easy-mcp-ai-bearer-token'
 
 Token stays in the environment — never commit it.
 
-## Marketing & trust fixes (Jul 2026)
+## Flagship marketing package (Jul 2026)
 
-See **`site/APPLY.md`** for the full deploy checklist.
+Positioning: **`site/positioning.md`**  
+Deploy: **`python3 scripts/deploy-flagship.py`** (requires `WP_API_TOKEN`)  
+Details: **`site/APPLY.md`**
 
-Quick start:
-
-1. `python3 scripts/apply-via-mcp.py` (requires `WP_API_TOKEN`) or paste HTML from `site/content/`
-2. Append `site/theme/edrift-patches.css` to the child theme
-3. Rebuild nav (`site/content/nav-ia.md`) and footer (`site/content/footer.html`)
-4. Work through `security/hardening-checklist.md`
+Includes homepage product redesign, Resources toolkit, About story, CSS system, nav/footer IA, privacy/security hardening.

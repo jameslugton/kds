@@ -2,7 +2,17 @@
 
 This package implements the review actions for [blog.lugton.co.uk](https://blog.lugton.co.uk/).
 
-**Brand title (match logo):** `Security e-Drift` — with tagline `the quiet compromise`.
+**Brand title (match logo):** `Security e-Drift` — with tagline `the quiet compromise`.  
+**Promise:** Cybersecurity that stays calm — so you can stay sharp.
+
+## Flagship deploy (preferred)
+
+```bash
+export WP_API_TOKEN='…'   # never commit; rotate if shared
+python3 scripts/deploy-flagship.py
+```
+
+Updates Home, Resources, About, site title/description, and AI hub callout.
 
 ## What’s included
 

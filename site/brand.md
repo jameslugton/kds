@@ -2,42 +2,32 @@
 
 ## Name casing (match the logo)
 
-Public titles and wordmarks must match the logo:
-
 - **Security e-Drift**
-- Tagline under the mark: **the quiet compromise** (lowercase, as on the logo)
+- Tagline: **the quiet compromise** (lowercase, as on the logo)
 
-Correct:
-- `Security e-Drift`
-- `e-Drift`
+Avoid `e-drift` in titles/UI (URLs/slugs may stay kebab-case).
 
-Avoid in titles/UI:
-- `Security e-drift`
-- `e-drift` (except in URLs/slugs and code identifiers)
+## Promise
 
-WordPress / Yoast:
-- Site title → `Security e-Drift`
-- Homepage page title → `Security e-Drift`
-- Document titles can use `Security e-Drift — …`
+> Cybersecurity that stays calm — so you can stay sharp.
 
-URL slugs may stay kebab-case (`security-e-drift`) — that is fine.
+## Supporting line
 
-## Consumer-facing supporting line
+> Clear guidance for UK homes and small teams. Scams, AI habits, and everyday security — without the jargon or the fear.
 
-Under the logo title + “the quiet compromise”, use one short promise:
+## Voice
 
-> Calm cybersecurity for UK homes and small teams
+Calm, specific, UK-plain. One memorable rule beats ten tips. Never sell fear.
 
-or
-
-> Clear guidance for UK homes and small teams — without the jargon.
+See `site/positioning.md` for niche product strategy.
 
 ## Blog vs services
 
 - **Security e-Drift** = free educational blog and resources
-- **Lugton** = IT support & security services (separate site / contact)
+- **Lugton** = IT support & security services
 
-## Social / SEO
+## SEO / social
 
-- Fix or remove Yoast Twitter site handle `@drift` (placeholder).
-- Open Graph site name: `Security e-Drift`.
+- Site title: `Security e-Drift`
+- Tagline/description: promise line above
+- Remove Yoast Twitter placeholder `@drift`

@@ -28,18 +28,16 @@ See `site/positioning.md` for niche product strategy.
 
 ## Header lockup (match the logo)
 
-Visible brand chrome should stack like the logo mark:
-
-1. **Security**
-2. **e-Drift**
-3. **the quiet compromise** (lowercase)
+- **Header logo** carries the full mark (padlock + Security / e-Drift / the quiet compromise).
+- **Home hero** may repeat the stacked lockup once (brand-first landing).
+- **Inner pages** should lead with the page job (H1), not restamp the logo lockup under the header.
 
 Do not uppercase the brand in page headers (avoid `SECURITY E-DRIFT` eyebrows).
 
-## SEO / social
+## SEO / social (manual if MCP cannot write)
 
 - Site title: `Security e-Drift`
 - Tagline/description: promise line above
-- Yoast → Site representation → Website name: `Security e-Drift` (not `e-drift`)
-- Remove Yoast Twitter placeholder `@drift`
-- Author bio: use `Security e-Drift` (MCP user update is disabled — edit in Users)
+- Yoast → Site representation → Website name + alternate: `Security e-Drift`
+- Remove Yoast Twitter placeholder `@drift` (SEO → Social)
+- Author bio: use `Security e-Drift` (Users → James; `wp_update_user` is disabled in MCP)

@@ -59,13 +59,15 @@ If tool names differ, copy HTML from `site/content/` into wp-admin manually (Pag
 3. Deploy `security/subscribe-endpoint.php` into child theme `functions.php` (or MU-plugin).
 4. Complete `security/hardening-checklist.md` (HSTS, MCP lockdown, rotate token, fix Twitter `@drift`).
 
-### E. Brand
+### E. Brand & shatterproof checklist
 
-1. Set WordPress **Site title** and Home page title to **Security e-Drift** (match the logo — see `site/brand.md`).
-2. Keep logo tagline **the quiet compromise** with the brand lockup on home/footer/product headers.
-3. Yoast → **SEO → General → Site representation**: Website name + alternate name = `Security e-Drift` (clears `og:site_name` / schema `WebSite.name` still stuck on `Security e-drift`).
-4. Users → James Lugton → Biographical info: replace `e-drift` with `e-Drift`.
-5. Optional: rename child theme `Theme Name` in `style.css` from `Security e-drift` → `Security e-Drift`.
+1. Site title **Security e-Drift**; home hero may stack the logo lockup; inner pages lead with the page H1.
+2. Primary nav = **6 hubs only** (no article children) — see `site/content/nav-ia.md`.
+3. Yoast → **SEO → General → Site representation**: Website name + alternate = `Security e-Drift`.
+4. Yoast → **Social**: remove Twitter `@drift`.
+5. Users → James Lugton → bio: `Security e-Drift` casing.
+6. Hide/retire `.edrift-reader-footer` (CSS in patches does this); keep one footer system.
+7. Optional: rename child theme `Theme Name` in `style.css` from `Security e-drift` → `Security e-Drift`.
 
 ## Verify
 

@@ -187,18 +187,7 @@ def main() -> int:
         {"post_id": 247, "post_type": "pages", "meta": {"_kad_post_title": "hide"}},
     )
 
-    print("Fixing AI hub callout…")
-    print(
-        m.tool(
-            "wp_replace_in_post",
-            {
-                "id": 838,
-                "field": "post_content",
-                "search": "<strong>Remember this:</strong> <strong>Niche focus:</strong> AI + human risk + scams + small-business security. Start here, then pick one habit to practise.",
-                "replace": "<strong>Remember this:</strong> prefer AI as an advisor by default. Promote a tool to actor only with a narrow job — and a human brake.",
-            },
-        )
-    )
+    print("Hardening AI hub…")
     m.tool(
         "wp_replace_in_post",
         {
@@ -209,6 +198,86 @@ def main() -> int:
             "max_replacements": 20,
         },
     )
+    print(
+        m.tool(
+            "wp_yoast_update_post_seo",
+            {
+                "post_id": 838,
+                "seo_title": "AI, human risk & scams | Security e-Drift",
+                "og_title": "AI, human risk & scams | Security e-Drift",
+                "twitter_title": "AI, human risk & scams | Security e-Drift",
+                "meta_description": "A curated hub on AI security, human risk, scams, and small-business defences — practical guides from Security e-Drift.",
+            },
+        )
+    )
+
+    print("Hardening scams hub…")
+    m.tool(
+        "wp_replace_in_post",
+        {
+            "id": 548,
+            "field": "post_content",
+            "search": "Security e-drift",
+            "replace": "Security e-Drift",
+            "max_replacements": 20,
+        },
+    )
+    # Ensure a visible H1 (Kadence title may be styled away on some templates)
+    scams = m.tool("wp_get_page", {"page_id": 548})
+    content = (scams or {}).get("content") or ""
+    if 'class="edrift-product-hero"' not in content and "edrift-product-hero" not in content:
+        hero = (
+            '<!-- wp:html -->\n'
+            '<div class="edrift-product-hero">'
+            '<h1 class="edrift-product-hero__title">Online scams</h1>'
+            '<p class="edrift-product-hero__lede">'
+            "Phishing, fakes, and fraud tips — calm guidance for UK homes and small teams."
+            "</p></div>\n"
+            "<!-- /wp:html -->\n\n"
+        )
+        print(
+            m.tool(
+                "wp_update_page",
+                {
+                    "page_id": 548,
+                    "title": "Online scams — phishing, fakes and fraud tips",
+                    "content": hero + content,
+                    "status": "publish",
+                },
+            )
+        )
+    m.tool(
+        "wp_update_post_meta",
+        {"post_id": 548, "post_type": "pages", "meta": {"_kad_post_title": "hide"}},
+    )
+    print(
+        m.tool(
+            "wp_yoast_update_post_seo",
+            {
+                "post_id": 548,
+                "seo_title": "Online scams | Security e-Drift",
+                "og_title": "Online scams | Security e-Drift",
+                "twitter_title": "Online scams | Security e-Drift",
+                "meta_description": "Phishing, fakes, and fraud tips — calm guidance from Security e-Drift.",
+            },
+        )
+    )
+
+    print("Refreshing key page SEO titles…")
+    for pid, seo_title, og_title in [
+        (870, "Security e-Drift — the quiet compromise", "Security e-Drift — the quiet compromise"),
+        (837, "Resources & next steps | Security e-Drift", "Resources & next steps | Security e-Drift"),
+        (247, "About Security e-Drift — James Lugton", "About Security e-Drift — James Lugton"),
+    ]:
+        m.tool(
+            "wp_yoast_update_post_seo",
+            {
+                "post_id": pid,
+                "seo_title": seo_title,
+                "og_title": og_title,
+                "twitter_title": og_title,
+            },
+        )
 
     print("Done.")
     return 0

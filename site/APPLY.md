@@ -64,10 +64,16 @@ If tool names differ, copy HTML from `site/content/` into wp-admin manually (Pag
 1. Site title **Security e-Drift**; home hero may stack the logo lockup; inner pages lead with the page H1.
 2. Primary nav = **6 hubs only** (no article children) — see `site/content/nav-ia.md`.
 3. Yoast → **SEO → General → Site representation**: Website name + alternate = `Security e-Drift`.
-4. Yoast → **Social**: remove Twitter `@drift`.
-5. Users → James Lugton → bio: `Security e-Drift` casing.
-6. Hide/retire `.edrift-reader-footer` (CSS in patches does this); keep one footer system.
-7. Optional: rename child theme `Theme Name` in `style.css` from `Security e-drift` → `Security e-Drift`.
+4. Users → James Lugton → bio: `Security e-Drift` casing.
+5. Hide/retire `.edrift-reader-footer` (CSS in patches does this); keep one footer system.
+
+### F. Theme file drops (Issues 1–3)
+
+Child theme path: `wp-content/themes/security-edrift/` (not writable via MCP — copy via SFTP/file manager). Package: `site/theme/security-edrift/`.
+
+1. **Twitter `@drift` (Yoast):** Copy `functions-edrift-fixes.php` and append lines from `functions.php.append` into existing `functions.php`. Then **Yoast SEO → Settings → Social → Twitter** → delete `@drift` → Save. No correct handle exists in options/code.
+2. **Stories template:** Copy `page-stories.php`. Page **Stories** already exists at `/stories/` (id 1006). Assign template **Stories** under Page Attributes. Then **Appearance → Menus → Stories** → URL `/stories/` (do not change the menu URL from code).
+3. **Company field:** Was hardcoded honeypot HTML on Home + Resources (not a widget/shortcode). Removed and redeployed via `deploy-flagship.py`.
 
 ## Verify
 

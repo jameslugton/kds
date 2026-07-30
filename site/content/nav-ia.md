@@ -6,7 +6,7 @@ Replace the crowded primary menu with **six top-level items**. Keep deep links r
 
 1. **Home** → `/`
 2. **Articles** → `/articles/`
-3. **Stories** → `/#edrift-stories`
+3. **Stories** → `/stories/` (after creating the Stories page + assigning `page-stories.php`; until then the menu may still say `/#edrift-stories` — change it in Appearance → Menus, not in code)
 4. **Online scams** → `/scams/`
 5. **Resources** → `/resources/`
 6. **About** → `/about-security-e-drift-and-the-quiet-compromise/`

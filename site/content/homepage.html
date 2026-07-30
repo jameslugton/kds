@@ -107,8 +107,6 @@
 	<p class="edrift-subscribe__fields">
 		<label class="screen-reader-text" for="edrift-sub-email">Email</label>
 		<input id="edrift-sub-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
-		<label class="edrift-hp" for="edrift-sub-company" aria-hidden="true">Company</label>
-		<input class="edrift-hp" id="edrift-sub-company" type="text" name="company" tabindex="-1" autocomplete="off" />
 		<input type="hidden" name="edrift_form" value="1" />
 		<button type="submit">Get the updates</button>
 	</p>
@@ -122,16 +120,9 @@
 	f.addEventListener("submit", function (e) {
 		e.preventDefault();
 		var msg = f.querySelector(".edrift-subscribe-msg");
-		var company = f.querySelector('[name="company"]');
-		if (company && company.value) {
-			msg.textContent = "Thanks — you’re on the list.";
-			f.reset();
-			return;
-		}
 		var fd = new FormData();
 		fd.append("email", f.email.value);
 		fd.append("edrift_form", "1");
-		fd.append("company", "");
 		msg.textContent = "Sending…";
 		fetch("/wp-json/edrift/v1/subscribe", {
 			method: "POST",

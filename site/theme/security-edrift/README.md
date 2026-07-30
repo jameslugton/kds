@@ -3,6 +3,8 @@
 Active theme on production: **security-edrift** (Kadence child) at  
 `wp-content/themes/security-edrift/`.
 
+**Prefer the packaged theme:** `../security-edrift2/` (+ zip `../dist/security-edrift2.zip`) — merged CSS, Stories template, Twitter strip. Overlay onto a copy of this live theme before activating (see that README).
+
 PHP theme files are not writable over the public HTTP API (403). Copy these
 files onto the server (SFTP, hosting file manager, or git deploy), then finish
 the wp-admin steps below.

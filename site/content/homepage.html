@@ -1,33 +1,73 @@
-<!-- Security e-drift homepage — paste into Pages → Home (page ID 870) as Custom HTML / code view.
-     Pair with site/theme/edrift-patches.css (append to child theme assets/edrift.css). -->
+<!-- Security e-Drift homepage — flagship editorial product -->
 
-<div class="edrift-home-hero edrift-home-hero--split" style="--edrift-hero-image:url('https://blog.lugton.co.uk/wp-content/uploads/2026/07/fm-brand.jpg')">
-	<div class="edrift-home-hero__copy">
-		<p class="edrift-home-hero__brand">Security e-Drift</p>
-		<p class="edrift-home-hero__tagline-logo">the quiet compromise</p>
-		<p class="edrift-home-hero__title">Calm cybersecurity for UK homes and small teams</p>
-		<p class="edrift-tagline">Clear guidance on scams, AI habits, and everyday security — without the jargon.</p>
-		<p class="edrift-home-hero__actions">
-			<a class="edrift-btn edrift-btn--primary" href="/scams/">I’ve seen a scam</a>
-			<a class="edrift-btn edrift-btn--soft" href="/complete-small-business-cybersecurity-checklist-2026/">Protect my business</a>
+<style id="edrift-marketing-patches">
+/* critical styles loaded from site/theme/edrift-patches.css at deploy */
+</style>
+
+<section class="edrift-hero" style="--edrift-hero-image:url('https://blog.lugton.co.uk/wp-content/uploads/2026/07/fm-brand.jpg')" aria-label="Security e-Drift">
+	<div class="edrift-hero__inner">
+		<p class="edrift-hero__brand">Security e-Drift</p>
+		<p class="edrift-hero__mark">the quiet compromise</p>
+		<h1 class="edrift-hero__headline">Cybersecurity that stays calm — so you can stay sharp</h1>
+		<p class="edrift-hero__lede">Clear guidance for UK homes and small teams. Scams, AI habits, and everyday security — without the jargon or the fear.</p>
+		<p class="edrift-hero__actions">
+			<a class="edrift-btn edrift-btn--primary" href="#edrift-paths">Find your path</a>
+			<a class="edrift-btn edrift-btn--ghost" href="/complete-small-business-cybersecurity-checklist-2026/">Open the SMB checklist</a>
 		</p>
 	</div>
-</div>
+</section>
 
-<nav class="edrift-topic-nav" aria-label="Choose a path">
-	<p class="edrift-topic-nav__label">Or pick a path</p>
-	<div class="edrift-topic-nav__grid">
-		<a class="edrift-topic-chip" href="/scams/"><span class="edrift-topic-chip__title">Online scams</span><span class="edrift-topic-chip__hint">Phishing, fakes, and what to do next</span></a>
-		<a class="edrift-topic-chip" href="/ai-human-risk-scams/"><span class="edrift-topic-chip__title">AI &amp; human risk</span><span class="edrift-topic-chip__hint">Paste risks, advisors vs actors, kill-switches</span></a>
-		<a class="edrift-topic-chip" href="/complete-small-business-cybersecurity-checklist-2026/"><span class="edrift-topic-chip__title">SMB checklist 2026</span><span class="edrift-topic-chip__hint">A practical baseline for micro and small businesses</span></a>
-		<a class="edrift-topic-chip" href="/resources/"><span class="edrift-topic-chip__title">Resources</span><span class="edrift-topic-chip__hint">Templates, sessions, and updates</span></a>
+<p class="edrift-audience">Written for people who open the laptop between school runs, shop tills, and real invoices — not for people who live in a SOC.</p>
+
+<section class="edrift-paths" id="edrift-paths" aria-labelledby="edrift-paths-heading">
+	<div class="edrift-section-head">
+		<h2 id="edrift-paths-heading">Three ways in</h2>
+		<p class="edrift-section-head__desc">Pick the door that matches this week. One path is enough.</p>
 	</div>
-</nav>
+	<div class="edrift-paths__list" role="list">
+		<a class="edrift-path" role="listitem" href="/scams/">
+			<span class="edrift-path__kicker">If something feels off</span>
+			<span class="edrift-path__title">Online scams</span>
+			<span class="edrift-path__hint">Phishing, fakes, and what to do next — including after a miss.</span>
+		</a>
+		<a class="edrift-path" role="listitem" href="/ai-human-risk-scams/">
+			<span class="edrift-path__kicker">If AI is in your workflow</span>
+			<span class="edrift-path__title">AI &amp; human risk</span>
+			<span class="edrift-path__hint">Advisor vs actor, paste risks, and a kill-switch habit.</span>
+		</a>
+		<a class="edrift-path" role="listitem" href="/complete-small-business-cybersecurity-checklist-2026/">
+			<span class="edrift-path__kicker">If you run a small business</span>
+			<span class="edrift-path__title">SMB checklist 2026</span>
+			<span class="edrift-path__hint">A practical baseline you can tick through in one sitting.</span>
+		</a>
+	</div>
+</section>
+
+<section class="edrift-manifesto" aria-labelledby="edrift-manifesto-heading">
+	<h2 id="edrift-manifesto-heading">The quiet compromise</h2>
+	<p>Most harm does not arrive as a movie hack. It arrives as a small drift in routine: a rushed click, a shared password, a friendly supplier code that never got revoked, a bot promoted from “help me think” to “just send it.”</p>
+	<p class="edrift-manifesto__rule"><strong>Remember this:</strong> name the compromise early, and the week stays ordinary.</p>
+</section>
+
+<section class="edrift-feature" aria-labelledby="edrift-feature-heading">
+	<div class="edrift-section-head">
+		<p class="edrift-kicker">Field note</p>
+		<h2 id="edrift-feature-heading">Worth reading next</h2>
+	</div>
+	<article class="edrift-feature__piece">
+		<p class="edrift-feature__meta">AI · human risk</p>
+		<h3 class="edrift-feature__title"><a href="/ai-advisor-or-ai-actor-why-blast-radius-matters/">AI Advisor or AI Actor: Why Blast Radius Matters</a></h3>
+		<p class="edrift-feature__excerpt">AI as agony aunt keeps the blast radius small. AI as actor can touch email, money, and everything you connected. Choose the mode on purpose.</p>
+		<p><a class="edrift-text-link" href="/ai-advisor-or-ai-actor-why-blast-radius-matters/">Read the guide →</a>
+			<span class="edrift-feature__sep">·</span>
+			<a class="edrift-text-link" href="/when-the-bot-can-act-without-you/">Kill-switch companion →</a></p>
+	</article>
+</section>
 
 <section class="edrift-series-spotlight" id="edrift-stories" aria-labelledby="edrift-stories-heading">
 	<div class="edrift-section-head">
-		<h2 id="edrift-stories-heading" class="edrift-series-spotlight__heading">Stories</h2>
-		<p class="edrift-section-head__desc">Short chapters that make security feel everyday.</p>
+		<h2 id="edrift-stories-heading">Stories that stick</h2>
+		<p class="edrift-section-head__desc">Short chapters. No tech jargon. Security learned the way people actually remember it.</p>
 	</div>
 	<div class="edrift-series-spotlight__grid">
 		<article class="edrift-series-card">
@@ -39,29 +79,44 @@
 		<article class="edrift-series-card">
 			<p class="edrift-series-card__eyebrow">River tales</p>
 			<h3 class="edrift-series-card__title"><a href="/perspectives-in-troubled-waters/">Perspectives in Troubled Waters</a></h3>
-			<p class="edrift-series-card__desc">Trust, current, and drift — security stories with a quieter pace.</p>
+			<p class="edrift-series-card__desc">Trust, current, and drift — quieter stories about judgement under pressure.</p>
 			<p><a class="edrift-read-more" href="/perspectives-in-troubled-waters/">Browse the series →</a></p>
 		</article>
 	</div>
 </section>
 
-<h2 class="wp-block-heading">Guides worth bookmarking</h2>
-<ul class="wp-block-list">
-	<li><a href="/ai-advisor-or-ai-actor-why-blast-radius-matters/">AI Advisor or AI Actor: Why Blast Radius Matters</a></li>
-	<li><a href="/before-you-paste-it-into-the-bot-ai-risks-worth-slowing-down-for/">Before You Paste It Into the Bot</a></li>
-	<li><a href="/ai-security-policy-template-for-small-businesses/">AI Security Policy Template</a></li>
-	<li><a href="/cybersecurity-awareness-training-practical-guide-for-employees/">Awareness training — practical guide</a></li>
-	<li><a href="/pci-dss-for-small-business/">PCI DSS for small businesses</a></li>
-</ul>
-<p class="wp-block-paragraph"><a href="/articles/">Browse all articles →</a></p>
+<section class="edrift-toolkit" aria-labelledby="edrift-toolkit-heading">
+	<div class="edrift-section-head">
+		<h2 id="edrift-toolkit-heading">Tools you can use today</h2>
+		<p class="edrift-section-head__desc">Not another tip list — artefacts you can adapt this week.</p>
+	</div>
+	<ul class="edrift-toolkit__list">
+		<li>
+			<a href="/complete-small-business-cybersecurity-checklist-2026/"><strong>Small Business Cybersecurity Checklist 2026</strong></a>
+			<span> — print or PDF · MFA, invoices, backups, 90-day plan</span>
+		</li>
+		<li>
+			<a href="/ai-security-policy-template-for-small-businesses/"><strong>AI Security Policy Template</strong></a>
+			<span> — approved tools, what not to paste, human confirm steps</span>
+		</li>
+		<li>
+			<a href="/cybersecurity-awareness-training-practical-guide-for-employees/"><strong>Awareness training guide</strong></a>
+			<span> — short sessions that change Tuesday behaviour</span>
+		</li>
+		<li>
+			<a href="/pci-dss-for-small-business/"><strong>PCI DSS for small businesses</strong></a>
+			<span> — plain-English payment security</span>
+		</li>
+	</ul>
+	<p><a class="edrift-text-link" href="/resources/">All resources &amp; session requests →</a></p>
+</section>
 
 <form class="edrift-subscribe" method="post" action="/wp-json/edrift/v1/subscribe" novalidate>
-	<p class="edrift-subscribe__title"><strong>Get Security e-Drift updates</strong></p>
-	<p class="edrift-subscribe__desc">Occasional practical notes on scams, AI habits, and small-business basics. No spam. See the <a href="/privacy-policy/">privacy policy</a>.</p>
+	<p class="edrift-subscribe__title"><strong>Keep the calm habit</strong></p>
+	<p class="edrift-subscribe__desc">Occasional notes on scams, AI judgement, and small-business baselines. No spam. <a href="/privacy-policy/">Privacy</a>.</p>
 	<p class="edrift-subscribe__fields">
 		<label class="screen-reader-text" for="edrift-sub-email">Email</label>
 		<input id="edrift-sub-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
-		<!-- Honeypot: leave empty -->
 		<label class="edrift-hp" for="edrift-sub-company" aria-hidden="true">Company</label>
 		<input class="edrift-hp" id="edrift-sub-company" type="text" name="company" tabindex="-1" autocomplete="off" />
 		<input type="hidden" name="edrift_form" value="1" />
@@ -106,20 +161,39 @@
 })();
 </script>
 
-<div class="wp-block-group edrift-cta has-background" style="border-left-color:#3d5a6c;border-left-width:3px;background-color:#eef2f0;padding:1.25rem">
-	<p class="wp-block-paragraph"><strong>What to do next</strong></p>
-	<ul class="wp-block-list">
-		<li><a href="/ai-security-policy-template-for-small-businesses/"><strong>Adapt the AI security policy template</strong></a> — approved tools, what not to paste, human confirm steps</li>
-		<li><a href="mailto:james@lugton.co.uk?subject=AI%20%2F%20human-risk%20awareness%20session"><strong>Request an AI / human-risk awareness session</strong></a> for your team or community group</li>
-		<li><a href="/complete-small-business-cybersecurity-checklist-2026/"><strong>Open the Small Business Cybersecurity Checklist 2026</strong></a> · <a href="https://blog.lugton.co.uk/wp-content/uploads/2026/07/edrift-smb-checklist-2026.pdf">PDF</a></li>
-		<li><a href="/ai-advisor-or-ai-actor-why-blast-radius-matters/"><strong>AI advisor vs actor</strong></a> · <a href="/when-the-bot-can-act-without-you/"><strong>Kill-switch guide</strong></a></li>
-		<li><a href="/feed/"><strong>Subscribe via RSS</strong></a> · <a href="/resources/">All resources &amp; contact</a></li>
-	</ul>
-	<p class="wp-block-paragraph"><em>Security e-Drift</em> stays free with light Google ads and occasional affiliate recommendations. <a href="/affiliate-disclosure/">How that works</a>.</p>
-</div>
+<section class="edrift-author-band" aria-labelledby="edrift-author-heading">
+	<h2 id="edrift-author-heading" class="screen-reader-text">About the author</h2>
+	<p><strong>James Lugton</strong> — Cyber Security Analyst, Yorkshire. Day job in online payments security; evenings translating it into plain English.</p>
+	<p class="edrift-author-band__links">
+		<a href="/about-security-e-drift-and-the-quiet-compromise/">Why e-Drift exists</a>
+		<span aria-hidden="true"> · </span>
+		<a href="https://www.linkedin.com/in/james-robert-lugton-70874443" rel="noopener noreferrer">LinkedIn</a>
+		<span aria-hidden="true"> · </span>
+		<a href="mailto:james@lugton.co.uk?subject=AI%20%2F%20human-risk%20awareness%20session">Request a calm awareness session</a>
+	</p>
+	<p class="edrift-author-band__note"><em>Written and security-checked by James Lugton.</em> Educational guidance only — not formal assurance or legal advice. The site stays free with light ads and occasional affiliates — <a href="/affiliate-disclosure/">how that works</a>.</p>
+</section>
 
-<div class="wp-block-group edrift-author-box" style="border-top-color:#3d5a6c;border-top-width:2px;padding-top:1.25rem">
-	<p class="wp-block-paragraph"><strong>About the author</strong></p>
-	<p class="wp-block-paragraph">James Lugton is a Cyber Security Analyst based in Yorkshire. He writes <em>Security e-Drift</em> — calm, practical guidance on scams, AI-related human risk, and small-business security. <a href="https://www.linkedin.com/in/james-robert-lugton-70874443" rel="noopener noreferrer">LinkedIn</a> · <a href="/about-security-e-drift-and-the-quiet-compromise/">Full profile</a></p>
-	<p class="wp-block-paragraph"><em>Written and security-checked by James Lugton.</em> Educational guidance only — not formal assurance or legal advice.</p>
+<div class="edrift-site-footer">
+	<p class="edrift-site-footer__brand">Security e-Drift</p>
+	<p class="edrift-site-footer__tagline">the quiet compromise</p>
+	<nav class="edrift-site-footer__nav" aria-label="Footer">
+		<a href="/privacy-policy/">Privacy</a>
+		<span class="edrift-site-footer__sep" aria-hidden="true">·</span>
+		<a href="/terms-of-use-for-security-e-drift/">Terms</a>
+		<span class="edrift-site-footer__sep" aria-hidden="true">·</span>
+		<a href="/affiliate-disclosure/">Affiliate disclosure</a>
+		<span class="edrift-site-footer__sep" aria-hidden="true">·</span>
+		<a href="/resources/">Resources</a>
+		<span class="edrift-site-footer__sep" aria-hidden="true">·</span>
+		<a href="/resources/">Contact</a>
+		<span class="edrift-site-footer__sep" aria-hidden="true">·</span>
+		<a href="https://www.linkedin.com/in/james-robert-lugton-70874443" rel="noopener noreferrer">LinkedIn</a>
+		<span class="edrift-site-footer__sep" aria-hidden="true">·</span>
+		<a href="/feed/">RSS</a>
+	</nav>
+	<p class="edrift-site-footer__meta">
+		© 2026 Security e-Drift · Educational guidance only ·
+		<a href="https://lugton.co.uk/" rel="noopener noreferrer">Lugton — IT support &amp; security</a>
+	</p>
 </div>

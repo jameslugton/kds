@@ -26,8 +26,20 @@ See `site/positioning.md` for niche product strategy.
 - **Security e-Drift** = free educational blog and resources
 - **Lugton** = IT support & security services
 
+## Header lockup (match the logo)
+
+Visible brand chrome should stack like the logo mark:
+
+1. **Security**
+2. **e-Drift**
+3. **the quiet compromise** (lowercase)
+
+Do not uppercase the brand in page headers (avoid `SECURITY E-DRIFT` eyebrows).
+
 ## SEO / social
 
 - Site title: `Security e-Drift`
 - Tagline/description: promise line above
+- Yoast → Site representation → Website name: `Security e-Drift` (not `e-drift`)
 - Remove Yoast Twitter placeholder `@drift`
+- Author bio: use `Security e-Drift` (MCP user update is disabled — edit in Users)

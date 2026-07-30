@@ -62,7 +62,10 @@ If tool names differ, copy HTML from `site/content/` into wp-admin manually (Pag
 ### E. Brand
 
 1. Set WordPress **Site title** and Home page title to **Security e-Drift** (match the logo — see `site/brand.md`).
-2. Keep logo tagline **the quiet compromise** with the brand lockup on home/footer.
+2. Keep logo tagline **the quiet compromise** with the brand lockup on home/footer/product headers.
+3. Yoast → **SEO → General → Site representation**: Website name + alternate name = `Security e-Drift` (clears `og:site_name` / schema `WebSite.name` still stuck on `Security e-drift`).
+4. Users → James Lugton → Biographical info: replace `e-drift` with `e-Drift`.
+5. Optional: rename child theme `Theme Name` in `style.css` from `Security e-drift` → `Security e-Drift`.
 
 ## Verify
 

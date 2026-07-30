@@ -147,6 +147,11 @@ def main() -> int:
             },
         )
     )
+    # Hide Kadence page title so the logo-matching hero is the only header
+    m.tool(
+        "wp_update_post_meta",
+        {"post_id": 870, "post_type": "pages", "meta": {"_kad_post_title": "hide"}},
+    )
 
     print("Updating resources…")
     print(
@@ -160,6 +165,10 @@ def main() -> int:
             },
         )
     )
+    m.tool(
+        "wp_update_post_meta",
+        {"post_id": 837, "post_type": "pages", "meta": {"_kad_post_title": "hide"}},
+    )
 
     print("Updating about…")
     print(
@@ -172,6 +181,10 @@ def main() -> int:
                 "status": "publish",
             },
         )
+    )
+    m.tool(
+        "wp_update_post_meta",
+        {"post_id": 247, "post_type": "pages", "meta": {"_kad_post_title": "hide"}},
     )
 
     print("Fixing AI hub callout…")

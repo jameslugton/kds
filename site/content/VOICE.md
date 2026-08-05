@@ -4,12 +4,15 @@ Source-of-truth HTML lives in `site/content/voice/`.
 
 ## Voice
 
-**Locked author voice:** [`VOICE-CARD.md`](./VOICE-CARD.md) (grilling, Aug 2026).  
+Author voice (locked): [`VOICE-CARD.md`](./VOICE-CARD.md) (grilling, Aug 2026).  
 Use that card for all new and revised blog copy. If it isn’t James’s style and vision, it doesn’t go live.
+
+**Voice-card revamp (Aug 2026):** flagship hubs + core how-tos under `site/content/voice/` and `site/content/voice/revamp/`.  
+Deploy: `WP_API_TOKEN=… python3 scripts/revamp-voice.py`
 
 Short reminder: calm UK-plain for non-technical readers; sharp only at the click/transfer moment; jargon as plain action then `(mfa)`; empower with a self-check, not a sales ending. Remove conversion hype, repetition, unsupported claims, and stock AI-blog filler.
 
-Deploy voice: `WP_API_TOKEN=… python3 scripts/demarket-voice.py`
+Deploy older demarket pass: `WP_API_TOKEN=… python3 scripts/demarket-voice.py`
 
 ## Design
 Removed SaaS hub landings (atmos glows, feature pills, brand restamp on inner pages).

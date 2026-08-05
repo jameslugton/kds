@@ -1,0 +1,1186 @@
+/**
+ * Security e-Drift — proportion & UX system
+ * Inline on key pages + append to child theme edrift.css (bump ver).
+ */
+
+:root {
+	--edrift-accent: #2a6f7f;
+	--edrift-accent-hover: #1f5563;
+	--edrift-accent-soft: rgba(42, 111, 127, 0.1);
+	--edrift-text: #1c2428;
+	--edrift-muted: #5f6b73;
+	--edrift-muted-light: #8a959c;
+	--edrift-surface: #f3f6f5;
+	--edrift-paper: #ffffff;
+	--edrift-border: rgba(28, 36, 40, 0.09);
+	--edrift-font-ui: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+	--edrift-font-display: "Lora", Georgia, "Times New Roman", serif;
+	--edrift-measure: 40rem;
+	--edrift-measure-wide: 46rem;
+	--edrift-space-1: 0.5rem;
+	--edrift-space-2: 0.75rem;
+	--edrift-space-3: 1rem;
+	--edrift-space-4: 1.5rem;
+	--edrift-space-5: 2rem;
+	--edrift-space-6: 2.75rem;
+	--edrift-space-7: 3.5rem;
+	--edrift-radius: 12px;
+	--edrift-tap: 2.75rem;
+}
+
+/* ——— Header logo proportion (was 200px of a 1024² mark) ——— */
+.site-header .site-branding a.brand img.custom-logo,
+.site-mobile-header .site-branding a.brand img.custom-logo {
+	max-width: 140px !important;
+	width: 140px;
+	height: auto;
+}
+
+@media (max-width: 767px) {
+	.site-header .site-branding a.brand img.custom-logo,
+	.site-mobile-header .site-branding a.brand img.custom-logo {
+		max-width: 118px !important;
+		width: 118px;
+	}
+}
+
+.site-main-header-inner-wrap {
+	min-height: 72px;
+}
+
+/* ——— Home: remove competing page title ——— */
+.home .entry-hero,
+.home .entry-hero.page-hero-section,
+.home .entry-header.page-title {
+	display: none !important;
+}
+
+/* ——— Home canvas ——— */
+.home .content-bg,
+.home .entry-content-wrap {
+	background:
+		radial-gradient(1000px 420px at 8% -8%, rgba(42, 111, 127, 0.08), transparent 55%),
+		radial-gradient(800px 360px at 100% 0%, rgba(28, 36, 40, 0.035), transparent 52%),
+		var(--edrift-surface);
+}
+
+.home .entry.single-entry,
+.home .entry-content-wrap {
+	box-shadow: none;
+	background: transparent;
+}
+
+.home .content-area {
+	margin-top: 0;
+	margin-bottom: var(--edrift-space-6);
+}
+
+.home .entry-content-wrap {
+	padding: 0;
+}
+
+/* Reading measure for everything after the hero */
+.home .entry-content > *:not(.edrift-hero):not(style) {
+	max-width: var(--edrift-measure);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	box-sizing: border-box;
+}
+
+.home .entry-content > .edrift-series-spotlight,
+.home .entry-content > .edrift-site-footer {
+	max-width: var(--edrift-measure-wide);
+}
+
+/* ——— Type utilities ——— */
+.edrift-kicker {
+	margin: 0 0 var(--edrift-space-1);
+	font-family: var(--edrift-font-ui);
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--edrift-accent);
+}
+
+.edrift-text-link {
+	font-weight: 600;
+	text-decoration: none;
+	color: var(--edrift-accent);
+}
+
+.edrift-text-link:hover {
+	text-decoration: underline;
+	color: var(--edrift-accent-hover);
+}
+
+.edrift-section-head {
+	margin: 0 0 var(--edrift-space-3);
+}
+
+.edrift-section-head h2,
+.edrift-paths h2,
+.edrift-manifesto h2,
+.edrift-feature h2,
+.edrift-toolkit h2,
+.edrift-series-spotlight__heading {
+	font-family: var(--edrift-font-display);
+	font-size: clamp(1.45rem, 2.4vw, 1.75rem);
+	font-weight: 600;
+	line-height: 1.2;
+	letter-spacing: -0.015em;
+	margin: 0;
+	color: var(--edrift-text);
+}
+
+.edrift-section-head__desc {
+	margin: 0.4rem 0 0;
+	font-size: 1rem;
+	line-height: 1.55;
+	color: var(--edrift-muted);
+	max-width: 34rem;
+}
+
+/* ——— Buttons / taps ——— */
+.edrift-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.35rem;
+	min-height: var(--edrift-tap);
+	padding: 0.65rem 1.2rem;
+	font-family: var(--edrift-font-ui);
+	font-size: 0.9375rem;
+	font-weight: 600;
+	line-height: 1.2;
+	text-decoration: none;
+	border-radius: 999px;
+	transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.edrift-btn--primary {
+	background: #f7faf9;
+	color: #12323c !important;
+	box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+}
+
+.edrift-btn--primary:hover {
+	transform: translateY(-1px);
+	background: #fff;
+	color: #0f2c38 !important;
+}
+
+.edrift-btn--ghost {
+	background: rgba(255, 255, 255, 0.08);
+	color: #f7faf9 !important;
+	border: 1px solid rgba(247, 250, 249, 0.3);
+}
+
+.edrift-btn--ghost:hover {
+	background: rgba(255, 255, 255, 0.16);
+	color: #fff !important;
+}
+
+.edrift-btn--soft {
+	background: var(--edrift-accent-soft);
+	color: var(--edrift-accent-hover);
+	border: 0;
+}
+
+.edrift-btn--soft:hover {
+	background: var(--edrift-accent);
+	color: #fff;
+}
+
+/* ——— Hero ——— */
+.edrift-hero {
+	position: relative;
+	overflow: hidden;
+	min-height: clamp(19.5rem, 48vh, 26.5rem);
+	margin: 0 0 var(--edrift-space-5);
+	color: #f7faf9;
+	background-color: #10242c;
+}
+
+.home .entry-content .edrift-hero {
+	width: 100vw;
+	max-width: 100vw;
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.edrift-hero::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: var(--edrift-hero-image);
+	background-size: cover;
+	background-position: center 28%;
+	opacity: 0.36;
+	transform: scale(1.03);
+}
+
+.edrift-hero::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(105deg, rgba(12, 28, 34, 0.94) 0%, rgba(12, 28, 34, 0.8) 48%, rgba(12, 28, 34, 0.32) 100%),
+		linear-gradient(0deg, rgba(12, 28, 34, 0.5), transparent 42%);
+}
+
+.edrift-hero__inner {
+	position: relative;
+	z-index: 1;
+	max-width: 36rem;
+	padding: clamp(1.75rem, 4.5vw, 2.75rem) clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* Match logo lockup: Security / e-Drift / the quiet compromise */
+.edrift-hero__brand {
+	margin: 0 0 0.15rem;
+	font-family: var(--edrift-font-ui);
+	font-size: clamp(1.85rem, 4.2vw, 2.35rem);
+	font-weight: 700;
+	line-height: 1.05;
+	letter-spacing: -0.02em;
+}
+
+.edrift-hero__brand-line {
+	display: block;
+}
+
+.edrift-hero__mark {
+	margin: 0 0 1rem;
+	font-family: var(--edrift-font-ui);
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.3;
+	letter-spacing: 0.01em;
+	text-transform: none;
+	color: rgba(247, 250, 249, 0.68);
+}
+
+.edrift-hero__headline {
+	margin: 0 0 0.65rem;
+	font-family: var(--edrift-font-ui);
+	font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+	font-weight: 500;
+	line-height: 1.35;
+	color: rgba(247, 250, 249, 0.95);
+}
+
+.edrift-hero__lede {
+	margin: 0;
+	max-width: 31rem;
+	font-size: 1rem;
+	line-height: 1.58;
+	color: rgba(247, 250, 249, 0.78);
+}
+
+.edrift-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	margin: 1.2rem 0 0;
+}
+
+.edrift-audience {
+	margin: 0 0 var(--edrift-space-4);
+	font-size: 0.98rem;
+	line-height: 1.55;
+	color: var(--edrift-muted);
+}
+
+/* ——— What’s new (momentum signal) ——— */
+.edrift-whats-new {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.35rem 0.65rem;
+	margin: 0 0 var(--edrift-space-4);
+	padding: 0.7rem 0;
+	border-bottom: 1px solid var(--edrift-border);
+	font-size: 0.9375rem;
+	line-height: 1.4;
+}
+
+.edrift-whats-new__label {
+	font-family: var(--edrift-font-ui);
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	color: var(--edrift-accent);
+}
+
+.edrift-whats-new__link {
+	font-weight: 600;
+	color: var(--edrift-text);
+	text-decoration: none;
+}
+
+.edrift-whats-new__link:hover {
+	color: var(--edrift-accent);
+	text-decoration: underline;
+}
+
+.edrift-whats-new__date {
+	color: var(--edrift-muted);
+	font-size: 0.875rem;
+}
+
+/* ——— Next move (resource-led conversion) ——— */
+.edrift-next-move {
+	margin: 0 0 var(--edrift-space-6);
+	padding: 1.15rem 1.1rem 1.25rem;
+	background: rgba(255, 255, 255, 0.78);
+	border: 1px solid var(--edrift-border);
+	border-left: 3px solid var(--edrift-accent);
+	border-radius: 0 var(--edrift-radius) var(--edrift-radius) 0;
+}
+
+.edrift-next-move .edrift-section-head {
+	margin-bottom: var(--edrift-space-3);
+}
+
+.edrift-next-move__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.65rem 1rem;
+	margin: 0 0 var(--edrift-space-3);
+}
+
+.edrift-toolkit__list--compact {
+	margin-bottom: 0;
+}
+
+.edrift-toolkit__list--compact li:first-child {
+	border-top: 1px solid var(--edrift-border);
+}
+
+.edrift-path--accent {
+	border-left-color: var(--edrift-accent);
+	background: var(--edrift-paper);
+}
+
+/* ——— Latest dated posts ——— */
+.edrift-latest {
+	margin: 0 0 var(--edrift-space-5);
+}
+
+.edrift-latest__list {
+	list-style: none;
+	margin: 0 0 var(--edrift-space-3);
+	padding: 0;
+}
+
+.edrift-latest__list li {
+	display: grid;
+	grid-template-columns: 6.5rem 1fr;
+	gap: 0.65rem 1rem;
+	padding: 0.85rem 0;
+	border-bottom: 1px solid var(--edrift-border);
+	align-items: start;
+}
+
+.edrift-latest__list li:first-child {
+	border-top: 1px solid var(--edrift-border);
+}
+
+.edrift-latest__date {
+	font-size: 0.8125rem;
+	font-weight: 600;
+	line-height: 1.4;
+	color: var(--edrift-muted);
+}
+
+.edrift-latest__title {
+	font-size: 1.02rem;
+	font-weight: 600;
+	line-height: 1.35;
+	color: var(--edrift-text);
+	text-decoration: none;
+}
+
+.edrift-latest__title:hover {
+	color: var(--edrift-accent);
+	text-decoration: underline;
+}
+
+/* ——— Paths ——— */
+.edrift-paths {
+	margin: 0 0 var(--edrift-space-6);
+}
+
+.edrift-paths__list {
+	display: grid;
+	gap: 0.55rem;
+}
+
+.edrift-path {
+	display: grid;
+	gap: 0.15rem;
+	min-height: var(--edrift-tap);
+	padding: 0.95rem 1.05rem;
+	text-decoration: none;
+	border-left: 3px solid rgba(42, 111, 127, 0.32);
+	background: rgba(255, 255, 255, 0.78);
+	transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.edrift-path:hover {
+	border-left-color: var(--edrift-accent);
+	background: var(--edrift-paper);
+	transform: translateX(2px);
+}
+
+.edrift-path__kicker {
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: var(--edrift-accent-hover);
+}
+
+.edrift-path__title {
+	font-size: 1.08rem;
+	font-weight: 700;
+	line-height: 1.25;
+	color: var(--edrift-text);
+}
+
+.edrift-path__hint {
+	font-size: 0.92rem;
+	line-height: 1.45;
+	color: var(--edrift-muted);
+}
+
+/* ——— Manifesto ——— */
+.edrift-manifesto {
+	margin: 0 0 var(--edrift-space-6);
+	padding-top: var(--edrift-space-5);
+	border-top: 1px solid var(--edrift-border);
+}
+
+.edrift-manifesto p {
+	margin: 0 0 var(--edrift-space-3);
+	font-size: 1.05rem;
+	line-height: 1.68;
+	color: var(--edrift-text);
+}
+
+.edrift-manifesto p:last-child {
+	margin-bottom: 0;
+}
+
+.edrift-manifesto__rule {
+	padding: 0.9rem 1rem;
+	background: var(--edrift-accent-soft);
+	border-radius: var(--edrift-radius);
+}
+
+.edrift-manifesto__rule p {
+	margin: 0;
+	font-size: 1rem;
+}
+
+/* ——— Feature ——— */
+.edrift-feature {
+	margin: 0 0 var(--edrift-space-6);
+}
+
+.edrift-feature__piece {
+	padding-top: 0.15rem;
+}
+
+.edrift-feature__meta {
+	margin: 0 0 0.3rem;
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--edrift-muted);
+}
+
+.edrift-feature__title {
+	margin: 0 0 0.45rem;
+	font-family: var(--edrift-font-display);
+	font-size: clamp(1.28rem, 2.4vw, 1.55rem);
+	font-weight: 600;
+	line-height: 1.25;
+	letter-spacing: -0.015em;
+}
+
+.edrift-feature__title a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.edrift-feature__title a:hover {
+	color: var(--edrift-accent);
+}
+
+.edrift-feature__excerpt {
+	margin: 0 0 0.75rem;
+	font-size: 1rem;
+	line-height: 1.58;
+	color: var(--edrift-muted);
+}
+
+.edrift-feature__sep {
+	color: rgba(28, 36, 40, 0.28);
+}
+
+/* ——— Series ——— */
+.edrift-series-spotlight {
+	margin: 0 0 var(--edrift-space-6);
+}
+
+.edrift-series-spotlight__grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--edrift-space-4);
+}
+
+/* Override theme card chrome (border/radius/shadow) — editorial rules, not boxes */
+.edrift-series-card {
+	display: block;
+	padding: var(--edrift-space-3) 0 0;
+	border: 0;
+	border-top: 2px solid rgba(42, 111, 127, 0.28);
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+}
+
+.edrift-series-card:hover {
+	transform: none;
+	box-shadow: none;
+	background: transparent;
+}
+
+.edrift-series-card__eyebrow {
+	margin: 0 0 0.3rem;
+	font-size: 0.7rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--edrift-accent);
+}
+
+.edrift-series-card__title {
+	margin: 0 0 0.4rem;
+	font-family: var(--edrift-font-display);
+	font-size: 1.18rem;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.edrift-series-card__title a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.edrift-series-card__title a:hover {
+	color: var(--edrift-accent);
+}
+
+.edrift-series-card__desc {
+	margin: 0 0 0.55rem;
+	font-size: 0.95rem;
+	line-height: 1.5;
+	color: var(--edrift-muted);
+}
+
+.edrift-read-more {
+	font-size: 0.9375rem;
+	font-weight: 600;
+	text-decoration: none;
+	color: var(--edrift-accent);
+}
+
+.edrift-read-more:hover {
+	text-decoration: underline;
+}
+
+/* ——— Toolkit ——— */
+.edrift-toolkit {
+	margin: 0 0 var(--edrift-space-5);
+}
+
+.edrift-toolkit__list {
+	list-style: none;
+	margin: 0 0 var(--edrift-space-3);
+	padding: 0;
+}
+
+.edrift-toolkit__list li {
+	padding: 0.85rem 0;
+	border-bottom: 1px solid var(--edrift-border);
+	font-size: 0.95rem;
+	line-height: 1.45;
+	color: var(--edrift-muted);
+}
+
+.edrift-toolkit__list li:first-child {
+	border-top: 1px solid var(--edrift-border);
+}
+
+.edrift-toolkit__list a {
+	display: inline-block;
+	color: var(--edrift-text);
+	text-decoration: none;
+}
+
+.edrift-toolkit__list a:hover {
+	color: var(--edrift-accent);
+	text-decoration: underline;
+}
+
+.edrift-toolkit__meta {
+	display: block;
+	margin-top: 0.2rem;
+	font-size: 0.9rem;
+	line-height: 1.45;
+	color: var(--edrift-muted);
+}
+
+.edrift-feature__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem 0.85rem;
+	margin: 0;
+}
+
+.edrift-feature__actions .edrift-feature__sep {
+	display: none;
+}
+
+/* ——— Subscribe ——— */
+.edrift-subscribe {
+	margin: 0 0 var(--edrift-space-5);
+	padding: 1.2rem 1.15rem;
+	background: var(--edrift-paper);
+	border: 1px solid var(--edrift-border);
+	border-left: 3px solid var(--edrift-accent);
+	border-radius: 0 var(--edrift-radius) var(--edrift-radius) 0;
+}
+
+.edrift-subscribe--lead {
+	padding: 1.35rem 1.25rem 1.4rem;
+	box-shadow: 0 8px 24px rgba(28, 36, 40, 0.04);
+}
+
+.edrift-subscribe--lead .edrift-kicker {
+	margin-bottom: 0.35rem;
+}
+
+.edrift-subscribe__title {
+	margin: 0 0 0.3rem;
+	font-size: 1.15rem;
+	line-height: 1.3;
+}
+
+.edrift-subscribe__desc {
+	margin: 0 0 0.8rem;
+	font-size: 0.9375rem;
+	line-height: 1.5;
+	color: var(--edrift-muted);
+}
+
+.edrift-subscribe__fields {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	margin: 0;
+	position: relative;
+}
+
+.edrift-subscribe__fields input[type="email"] {
+	flex: 1;
+	min-width: 12rem;
+	min-height: var(--edrift-tap);
+	padding: 0.55rem 0.75rem;
+	border: 1px solid rgba(28, 36, 40, 0.14);
+	border-radius: 8px;
+	font-size: 1rem;
+}
+
+.edrift-subscribe__fields button {
+	min-height: var(--edrift-tap);
+	padding: 0.55rem 1.1rem;
+	background: var(--edrift-accent);
+	color: #fff;
+	border: 0;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 0.9375rem;
+	font-weight: 600;
+}
+
+.edrift-subscribe__fields button:hover {
+	background: var(--edrift-accent-hover);
+}
+
+.edrift-subscribe .edrift-hp {
+	position: absolute !important;
+	left: -10000px !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+}
+
+.edrift-subscribe-msg {
+	margin: 0.5rem 0 0;
+	font-size: 0.875rem;
+	color: var(--edrift-muted);
+}
+
+/* ——— Author ——— */
+.edrift-author-band {
+	margin: 0 0 var(--edrift-space-5);
+	padding-top: var(--edrift-space-4);
+	border-top: 2px solid rgba(42, 111, 127, 0.26);
+}
+
+.edrift-author-band p {
+	margin: 0 0 0.65rem;
+	font-size: 0.98rem;
+	line-height: 1.55;
+}
+
+.edrift-author-band__links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem 0.75rem;
+	font-weight: 600;
+}
+
+.edrift-author-band__links .edrift-author-band__sep {
+	display: none;
+}
+
+.edrift-author-band__note {
+	font-size: 0.875rem;
+	color: var(--edrift-muted);
+}
+
+/* One footer system: kill legacy reader footer everywhere */
+.edrift-reader-footer {
+	display: none !important;
+}
+
+/* Home uses in-content brand footer — hide Kadence bottom chrome there */
+.home .site-bottom-footer-wrap {
+	display: none !important;
+}
+
+/* GTranslate float: park bottom-right; don't cover reading */
+#gt_float_wrapper {
+	top: auto !important;
+	bottom: 1rem !important;
+	right: 0.75rem !important;
+	z-index: 40;
+}
+
+.home .edrift-site-footer,
+.page-id-837 .entry-content,
+.page-id-247 .entry-content {
+	padding-bottom: 4.25rem;
+}
+
+/* Soft CTA readable as primary action on light pages */
+.edrift-btn--soft {
+	min-height: var(--edrift-tap);
+}
+
+/* If WP leaves empty parent classes after nav cull, hide carets */
+.header-navigation .menu-item-has-children:not(:has(.sub-menu .menu-item)) > .dropdown-nav-special-toggle,
+.header-navigation .menu-item-has-children:not(:has(.sub-menu .menu-item)) > button {
+	display: none !important;
+}
+
+/* ——— Footer ——— */
+.edrift-site-footer {
+	text-align: center;
+	padding: var(--edrift-space-5) 0 var(--edrift-space-3);
+	border-top: 1px solid var(--edrift-border);
+	margin-top: var(--edrift-space-3);
+}
+
+.edrift-site-footer__brand {
+	margin: 0 0 0.15rem;
+	font-family: var(--edrift-font-ui);
+	font-size: 1.15rem;
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: -0.02em;
+	text-transform: none;
+	color: var(--edrift-text);
+}
+
+.edrift-site-footer__tagline {
+	margin: 0 0 0.85rem;
+	font-family: var(--edrift-font-ui);
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.3;
+	color: var(--edrift-muted);
+	text-transform: none;
+}
+
+.edrift-site-footer__nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.15rem 0.1rem;
+	margin: 0.85rem 0 0;
+}
+
+.edrift-site-footer__nav a {
+	font-size: 0.8125rem;
+	font-weight: 600;
+	line-height: 1.2;
+	color: var(--edrift-accent);
+	text-decoration: none;
+	padding: 0.35rem 0.45rem;
+}
+
+.edrift-site-footer__nav a:hover {
+	text-decoration: underline;
+}
+
+.edrift-site-footer__sep {
+	color: rgba(28, 36, 40, 0.22);
+	padding: 0.35rem 0;
+}
+
+.edrift-site-footer__meta {
+	margin: 0.7rem 0 0;
+	font-size: 0.78rem;
+	line-height: 1.45;
+	color: var(--edrift-muted);
+}
+
+.edrift-site-footer__meta a {
+	color: var(--edrift-muted);
+}
+
+/* ——— Inner product pages ——— */
+.edrift-product-hero {
+	margin: 0 0 var(--edrift-space-4);
+	padding: 0.25rem 0 var(--edrift-space-4);
+	border-bottom: 1px solid var(--edrift-border);
+	max-width: var(--edrift-measure);
+}
+
+/* Inner pages: page job first — logo in header already carries the brand */
+.edrift-product-hero__title {
+	display: block;
+	font-family: var(--edrift-font-display);
+	font-size: clamp(1.7rem, 3.5vw, 2.15rem);
+	font-weight: 600;
+	line-height: 1.15;
+	letter-spacing: -0.02em;
+	margin: 0 0 0.55rem;
+	color: var(--edrift-text);
+}
+
+.edrift-product-hero__lede {
+	margin: 0;
+	font-size: 1.05rem;
+	line-height: 1.58;
+	color: var(--edrift-muted);
+	max-width: 38rem;
+}
+
+.edrift-product-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem 1rem;
+	margin: 1rem 0 0;
+}
+
+.edrift-session {
+	margin: 0 0 var(--edrift-space-5);
+	padding: 1.15rem 1.1rem;
+	border-left: 3px solid var(--edrift-accent);
+	background: rgba(255, 255, 255, 0.72);
+	border-radius: 0 var(--edrift-radius) var(--edrift-radius) 0;
+}
+
+.edrift-session h2 {
+	margin: 0 0 0.45rem;
+	font-family: var(--edrift-font-display);
+	font-size: clamp(1.35rem, 2.4vw, 1.6rem);
+	font-weight: 600;
+}
+
+.edrift-about-cta {
+	margin: var(--edrift-space-5) 0 0;
+	padding-top: var(--edrift-space-4);
+	border-top: 1px solid var(--edrift-border);
+}
+
+.edrift-shelf {
+	list-style: none;
+	margin: 0 0 var(--edrift-space-5);
+	padding: 0;
+	max-width: var(--edrift-measure);
+}
+
+.edrift-shelf li {
+	padding: 0.95rem 0;
+	border-bottom: 1px solid var(--edrift-border);
+}
+
+.edrift-shelf li:first-child {
+	border-top: 1px solid var(--edrift-border);
+}
+
+.edrift-shelf__title {
+	display: block;
+	font-size: 1.05rem;
+	font-weight: 700;
+	line-height: 1.3;
+	color: var(--edrift-text);
+	text-decoration: none;
+	margin-bottom: 0.2rem;
+}
+
+.edrift-shelf__title:hover {
+	color: var(--edrift-accent);
+}
+
+.edrift-shelf__meta {
+	margin: 0;
+	color: var(--edrift-muted);
+	font-size: 0.9375rem;
+	line-height: 1.5;
+}
+
+/* About portrait — real photo, never a giant square or avatar fallback */
+.edrift-about-photo {
+	margin: 0 0 var(--edrift-space-4);
+	max-width: 12.5rem;
+}
+
+.edrift-about-photo img,
+.page-id-247 .entry-content .edrift-about-photo img,
+.page-id-247 .entry-content .wp-block-image img {
+	display: block;
+	width: 180px;
+	max-width: 100%;
+	height: auto;
+	aspect-ratio: 1;
+	object-fit: cover;
+	border-radius: var(--edrift-radius);
+	background: var(--edrift-surface);
+}
+
+.edrift-about-photo figcaption {
+	margin: 0.45rem 0 0;
+	font-size: 0.8125rem;
+	line-height: 1.35;
+	color: var(--edrift-muted);
+}
+
+/* Resources / about content wrap calm */
+.page-id-837 .entry-content,
+.page-id-247 .entry-content {
+	max-width: var(--edrift-measure-wide);
+}
+
+/* Product pages use in-content brand lockup + H1 — hide Kadence page hero */
+.page-id-837 .entry-hero,
+.page-id-247 .entry-hero,
+.page-id-837 .entry-header.page-title,
+.page-id-247 .entry-header.page-title {
+	display: none !important;
+}
+
+/* ——— Motion ——— */
+@media (prefers-reduced-motion: no-preference) {
+	.edrift-hero__inner {
+		animation: edrift-hero-in 0.7s ease-out both;
+	}
+
+	.edrift-path {
+		animation: edrift-rise 0.5s ease-out both;
+	}
+
+	.edrift-path:nth-child(2) { animation-delay: 0.06s; }
+	.edrift-path:nth-child(3) { animation-delay: 0.12s; }
+
+	.edrift-series-card {
+		animation: edrift-rise 0.55s ease-out both;
+	}
+
+	.edrift-series-card:nth-child(2) { animation-delay: 0.07s; }
+}
+
+@keyframes edrift-hero-in {
+	from { opacity: 0; transform: translateY(10px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes edrift-rise {
+	from { opacity: 0; transform: translateY(7px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+/* ——— Breakpoints ——— */
+@media (max-width: 719px) {
+	.home .entry-content > *:not(.edrift-hero):not(style) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.edrift-hero {
+		min-height: 18.5rem;
+		width: 100%;
+		max-width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.home .entry-content .edrift-hero {
+		width: 100%;
+		max-width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.edrift-hero::after {
+		background: linear-gradient(180deg, rgba(12, 28, 34, 0.92) 0%, rgba(12, 28, 34, 0.8) 100%);
+	}
+
+	.edrift-hero__actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.edrift-hero__actions .edrift-btn {
+		width: 100%;
+	}
+
+	.edrift-audience {
+		margin-bottom: var(--edrift-space-4);
+	}
+
+	.edrift-paths,
+	.edrift-manifesto,
+	.edrift-feature,
+	.edrift-series-spotlight,
+	.edrift-next-move,
+	.edrift-latest {
+		margin-bottom: var(--edrift-space-5);
+	}
+
+	.edrift-latest__list li {
+		grid-template-columns: 1fr;
+		gap: 0.2rem;
+	}
+
+	.edrift-next-move__actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.edrift-next-move__actions .edrift-btn {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.edrift-path {
+		padding: 0.85rem 0.9rem;
+	}
+
+	.edrift-path:hover {
+		transform: none;
+	}
+
+	.edrift-series-spotlight__grid {
+		grid-template-columns: 1fr;
+		gap: var(--edrift-space-5);
+	}
+
+	.edrift-series-card {
+		padding-top: 1rem;
+	}
+
+	.edrift-feature__actions {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.45rem;
+	}
+
+	.edrift-author-band__links {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.45rem;
+	}
+
+	.edrift-subscribe {
+		padding: 1rem 0.95rem;
+	}
+
+	.edrift-subscribe__fields {
+		flex-direction: column;
+	}
+
+	.edrift-subscribe__fields button,
+	.edrift-subscribe__fields input[type="email"] {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.edrift-site-footer__brand {
+		font-size: 1.05rem;
+	}
+
+	.edrift-site-footer__nav {
+		gap: 0.25rem 0.15rem;
+		margin-top: 0.7rem;
+	}
+
+	.edrift-site-footer__sep {
+		display: none;
+	}
+
+	.edrift-site-footer__nav a {
+		padding: 0.45rem 0.55rem;
+		min-height: var(--edrift-tap);
+		display: inline-flex;
+		align-items: center;
+	}
+
+	.page-id-247 .entry-content .edrift-about-photo img,
+	.edrift-about-photo img {
+		max-width: 160px;
+		width: 160px;
+	}
+
+	.edrift-product-hero__actions {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.edrift-product-hero__actions .edrift-btn {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+@media (min-width: 1100px) {
+	.edrift-hero__inner {
+		padding-left: clamp(2rem, 8vw, 5rem);
+	}
+}

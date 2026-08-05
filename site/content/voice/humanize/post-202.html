@@ -1,0 +1,155 @@
+<!-- wp:block {"ref":572} /-->
+
+<!-- wp:paragraph -->
+<p>Checkout is where trust meets code. Your customer sees a payment form; behind that page, scripts handle shipping, analytics, chat widgets, and the handoff to Stripe or PayPal. Most of that is ordinary. The risk is the part you rarely inspect: JavaScript loading in the browser that can read card fields before the payment ever reaches your processor.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>That is e-skimming — often grouped under the label Magecart. The attack lives on your checkout page, not necessarily in server logs your host shows you. Firewalls and antivirus on the till PC will not see it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What your checkout page actually does</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>When someone pays, your site typically:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Sends payment details to your processor — hosted page or embedded form</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Stores order details, sometimes briefly</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Runs third-party scripts for tracking, chat, reviews, and theme features</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Any weak link — an outdated plugin, a compromised admin login, a script someone installed and forgot — gives an attacker room to add skimming code. I have seen shops lose weeks of card data that way and only find out from chargebacks.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The risks that do not shout</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Hidden JavaScript that copies card numbers as they are typed — e-skimming or Magecart-style skimming</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Old plugins or themes with known flaws</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Data intercepted because HTTPS is missing or misconfigured</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Once rogue code is on the page, attackers can skim cards, deface the site, or redirect customers. The skim is often the quiet one — orders still go through until the bank calls.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Ongoing work, not a one-off tick</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Protecting checkout is maintenance, not a project you finish:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Review what runs on checkout — not just the homepage</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Update plugins, themes, and core; remove what you do not use</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Watch for new scripts after a plugin install or agency handover</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Brief staff: odd checkout behaviour or duplicate charge reports go straight to whoever owns the site</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>If you only look when you remember, you will miss what changed last Tuesday.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When something goes wrong</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Even with decent habits, write down the basics before you need them:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Who to call — host, developer, payment provider, insurer</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>How to take checkout offline quickly</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>How to find out what changed and when</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>How to restore from backup and tell customers if you must</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Speed limits damage. A one-page note beats improvising at midnight.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Practical steps worth the effort</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Keep payment flows tidy:</strong> fewer scripts on checkout means fewer places for skimmers to hide</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Backups you have restored:</strong> a cloud folder you never tested is not a plan</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Monitor checkout scripts:</strong> alerts or script monitoring catch changes you would not spot by eye</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Know who holds the keys:</strong> who updates plugins, who has admin access, what is the out-of-hours number</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><strong>Stop! Pause!</strong> Before you install a new plugin or paste tracking code on checkout: Is it urgent? Do you know who wrote it? Is it really from a source you trust? If not sure — leave it off the payment page until you have checked.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Related: <a href="/magecart-e-skimming-script-monitoring-a-new-frontier-in-web-security/">Magecart and script monitoring</a> · <a href="/pci-dss-4-0-1-for-small-businesses-how-to-meet-saq-a-saq-c-vt/">PCI DSS SAQ guide</a> · <a href="/how-to-spot-a-fake-card-form-on-a-website/">Spot a fake card form</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A self-check</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>When did you last update your website plugins — and when did you last look at what scripts load on your checkout page specifically? If both answers are “cannot remember,” pick one to do this week. Chargebacks are how most small shops learn about a quiet skim.</p>
+<!-- /wp:paragraph -->

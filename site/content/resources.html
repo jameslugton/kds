@@ -1,0 +1,76 @@
+<!-- Resources — product toolkit page -->
+
+<div class="edrift-product-hero">
+	<h1 class="edrift-product-hero__title">Resources &amp; next steps</h1>
+	<p class="edrift-product-hero__lede">Awareness fades without a next action. Choose one artefact below and use it this week — then come back when you need the next one.</p>
+</div>
+
+<h2 class="wp-block-heading">Guides and templates</h2>
+<ul class="edrift-shelf">
+	<li>
+		<a class="edrift-shelf__title" href="/complete-small-business-cybersecurity-checklist-2026/">Small Business Cybersecurity Checklist 2026</a>
+		<p class="edrift-shelf__meta">The baseline for micro and small teams — MFA, invoices, backups, leavers, and a 90-day plan. <a href="https://blog.lugton.co.uk/wp-content/uploads/2026/07/edrift-smb-checklist-2026.pdf">Download PDF</a></p>
+	</li>
+	<li>
+		<a class="edrift-shelf__title" href="/ai-security-policy-template-for-small-businesses/">AI Security Policy Template</a>
+		<p class="edrift-shelf__meta">Approved tools, what not to paste, and human confirm steps — written for small businesses.</p>
+	</li>
+	<li>
+		<a class="edrift-shelf__title" href="/cybersecurity-awareness-training-practical-guide-for-employees/">Awareness training guide</a>
+		<p class="edrift-shelf__meta">Short sessions tied to everyday work — including phishing simulation do’s and don’ts.</p>
+	</li>
+	<li>
+		<a class="edrift-shelf__title" href="/ai-human-risk-scams/">AI, human risk &amp; scams hub</a>
+		<p class="edrift-shelf__meta">Advisor vs actor, paste risks, kill-switches, and the scam patterns AI makes more convincing.</p>
+	</li>
+</ul>
+
+<section class="edrift-session" aria-labelledby="edrift-session-heading">
+	<h2 id="edrift-session-heading">Awareness sessions</h2>
+	<p>Sessions for small teams and community groups on phishing judgement, AI-related human risk, and everyday habits.</p>
+	<ul class="wp-block-list">
+		<li><strong>30 or 60 minutes</strong>, online by default (Yorkshire in-person by arrangement)</li>
+		<li>Audience: owners, office staff, or mixed community groups</li>
+		<li>Focus: spot urgency tricks, pause before acting, and use a simple verify / stop habit</li>
+	</ul>
+	<p class="edrift-product-hero__actions">
+		<a class="edrift-btn edrift-btn--soft" href="mailto:james@lugton.co.uk?subject=AI%20%2F%20human-risk%20awareness%20session">Email to ask about a session</a>
+		<a class="edrift-text-link" href="/about-security-e-drift-and-the-quiet-compromise/">About James →</a>
+	</p>
+</section>
+
+<h2 class="wp-block-heading">Email updates</h2>
+<form class="edrift-subscribe" method="post" action="/wp-json/edrift/v1/subscribe" novalidate>
+	<p class="edrift-subscribe__title"><strong>Occasional updates</strong></p>
+	<p class="edrift-subscribe__desc">Notes when new checklists or guides are published. Unsubscribe anytime. <a href="/privacy-policy/">Privacy</a>.</p>
+	<p class="edrift-subscribe__fields">
+		<label class="screen-reader-text" for="edrift-sub-email-res">Email</label>
+		<input id="edrift-sub-email-res" type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+		<button type="submit">Subscribe</button>
+	</p>
+	<p class="edrift-subscribe-msg" role="status" aria-live="polite"></p>
+</form>
+<script>
+(function () {
+	var f = document.currentScript.previousElementSibling;
+	if (!f || !f.classList.contains("edrift-subscribe")) return;
+	f.addEventListener("submit", function (e) {
+		e.preventDefault();
+		var msg = f.querySelector(".edrift-subscribe-msg");
+		var fd = new FormData();
+		fd.append("email", f.email.value);
+		fd.append("edrift_form", "1");
+		msg.textContent = "Sending…";
+		fetch("/wp-json/edrift/v1/subscribe", { method: "POST", body: fd, credentials: "same-origin", headers: { Accept: "application/json" } })
+			.then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+			.then(function (res) {
+				msg.textContent = (res.d && res.d.message) || (res.ok ? "Thanks — check your inbox to confirm." : "Something went wrong.");
+				if (res.d && res.d.ok) f.reset();
+			})
+			.catch(function () { msg.textContent = "Email james@lugton.co.uk with “updates please”."; });
+	});
+})();
+</script>
+<p>Or use the <a href="/feed/">RSS feed</a>.</p>
+
+<p><em>Security e-Drift</em> is free educational guidance. Light ads and occasional affiliates help keep it that way — <a href="/affiliate-disclosure/">how that works</a>.</p>

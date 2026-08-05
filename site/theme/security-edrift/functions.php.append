@@ -1,0 +1,18 @@
+<?php
+/**
+ * APPEND to the existing child theme functions.php (do not replace the whole file).
+ *
+ * Active theme path:
+ *   wp-content/themes/security-edrift/functions.php
+ *
+ * Add these lines near the bottom of the existing functions.php (after ABSPATH guard):
+ */
+
+// Security e-Drift targeted fixes (Twitter meta strip + Stories page template).
+// ISSUE 1 admin: Yoast SEO → Settings → Social → Twitter → clear @drift
+// ISSUE 2 admin: Appearance → Menus → Stories → URL /stories/
+// ISSUE 3: Company field removed from Home/Resources subscribe HTML (hardcoded, not a widget).
+$edrift_fixes = get_stylesheet_directory() . '/functions-edrift-fixes.php';
+if ( file_exists( $edrift_fixes ) ) {
+	require_once $edrift_fixes;
+}

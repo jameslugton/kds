@@ -1,0 +1,225 @@
+<!-- wp:block {"ref":572} /-->
+
+<!-- wp:paragraph -->
+<p>If you sell online or take card payments by phone, your payment provider will ask about PCI DSS. That is the Payment Card Industry Data Security Standard — the shared rules for keeping card data safe. Version 4.0.1 is what most small businesses need to know about now.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>You do not need to be a compliance specialist to understand your bit of the work — which questionnaire applies, what your host and processor handle, and what you still need to maintain year-round.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What PCI DSS is — and why it matters</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>PCI DSS sets minimum controls for anyone who accepts card payments online, by phone, or in person. It is not optional if you take cards.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Ignore it and you risk:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Fines from your payment processor</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Higher transaction fees</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Losing the ability to take card payments</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The point is not box-ticking for its own sake. The rules exist because card fraud and breaches hurt merchants and customers alike — and because processors need evidence that you are doing your share.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What changed in PCI DSS 4.0.1</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The latest update matters for small businesses in three practical ways:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>More flexibility in how you implement some security measures — but you still need to show they work</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>A stronger focus on continuous security instead of a once-a-year checkup</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Clearer shared responsibilities when you use third-party tools — payment processors, hosted checkout, cloud services</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>In plain terms: less “file the form in January and forget it,” more “keep checkout, admin access, and scans in reasonable shape all year.”</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What is an SAQ, and which one do you need?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>An annual self-assessment questionnaire (SAQ) is the form most small merchants complete to confirm PCI compliance. Which SAQ applies depends on how you accept card payments — not on how big your turnover is.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">SAQ A — hosted payment pages (most online shops)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>If you only accept payments online through a third-party service (Nochex, Stripe, PayPal, and similar), SAQ A usually applies.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>You do not store, process, or transmit cardholder data directly — your payment provider does.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">SAQ C-VT — virtual terminals (phone payments)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>If you take payments over the phone and enter card details into a virtual terminal (PayPal Virtual Terminal, Stripe, and similar), SAQ C-VT applies.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>You never store cardholder data, and your payment process is strictly manual.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Choosing the correct SAQ matters. The wrong form delays compliance, wastes time, and can lead to higher fees or processor pushback.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How to meet SAQ A and SAQ C-VT</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Once you know which SAQ applies, here is how the core PCI DSS requirements usually land for small businesses.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">For SAQ A (online businesses using hosted payment pages)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Watch what runs on your checkout page.</strong> Hidden code on your site can steal card numbers even when payments go through a hosted page. Use script monitoring, content security policies, or security plugins to block unauthorised scripts. Regularly audit third-party integrations — chat widgets, analytics, tracking code.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Quarterly vulnerability scans.</strong> An Approved Scanning Vendor (ASV) must scan your website for weaknesses. Make sure there are no security misconfigurations in payment forms or hosted pages.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Secure admin access.</strong> Turn on an extra step to guard admin accounts — multi-factor authentication (mfa). Restrict payment settings to authorised personnel only.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Encrypt data in transit.</strong> Your site needs an active SSL/TLS certificate. Use HTTPS so data cannot be intercepted on the way.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">For SAQ C-VT (virtual terminal users)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Secure workstations and networks.</strong> Only process payments from a designated, secure workstation. Install firewalls and endpoint protection to prevent unauthorised access.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Never store cardholder data.</strong> Do not save credit card details in spreadsheets, emails, or notes. Your virtual terminal provider handles secure storage — let them do it.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Regular scans and monitoring.</strong> Perform quarterly ASV scans to identify security gaps. Use intrusion detection software to monitor system activity.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Train staff on secure payment handling.</strong> Educate staff on phishing and social engineering. Limit access to only employees who process transactions.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><strong>Stop! Pause!</strong> Before you type a customer’s card number into any screen: Is this the official virtual terminal? Are you on the right machine? Would you be happy if this number ended up in an email or spreadsheet? If not sure — stop and check with your payment provider’s guidance.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Risk management and incident response</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Even with strong measures, you need a plan for when things go wrong.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Risk management strategies</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Monitor payment systems</strong> for unusual activity — logging, transaction alerts, suspicious login notifications.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Schedule quarterly ASV scans</strong> to identify vulnerabilities.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Check third-party vendors.</strong> Validate that Nochex, Stripe, PayPal, or Square meet PCI DSS standards. Limit external integrations to trusted services.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">If you suspect a breach</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Identify and contain.</strong> Disconnect affected systems and secure your payment environment. Notify your payment provider about suspicious activity.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Contact key authorities.</strong> Reach out to your payment processor’s security team. If necessary, notify the PCI Security Standards Council (PCI SSC).</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Forensic investigation.</strong> If cardholder data was exposed, hire a PCI-certified forensic investigator (PFI).</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Notify affected customers</strong> if required — provide guidance on monitoring transactions and reporting fraud.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Strengthen controls post-incident.</strong> Review security gaps, update training for staff handling payments.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Related: <a href="/magecart-e-skimming-script-monitoring-a-new-frontier-in-web-security/">Magecart and script monitoring</a> · <a href="/securing-the-checkout-how-to-protect-your-online-business-from-hidden-risks/">Securing the checkout</a> · <a href="/complete-small-business-cybersecurity-checklist-2026/">SMB checklist</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A self-check</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Do you know which SAQ applies to your business — A for hosted checkout, or C-VT for phone payments? If you are not sure, ask your payment provider before your next renewal. Getting the wrong form is an easy mistake with an expensive fix.</p>
+<!-- /wp:paragraph -->

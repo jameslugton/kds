@@ -2260,3 +2260,292 @@
 		padding-left: clamp(2rem, 8vw, 5rem);
 	}
 }
+
+
+/* ===== design fixes ===== */
+/**
+ * Security e-Drift — design fixes (Aug 2026)
+ * Unify logo, kill glow/atmos leftovers, one footer, quiet GTranslate.
+ */
+
+/* One logo size — beat competing !important piles */
+.site-header .site-branding a.brand img.custom-logo,
+.site-mobile-header .site-branding a.brand img.custom-logo,
+body.security-edrift-modern .site-header .site-branding a.brand img.custom-logo,
+body.security-edrift-modern .site-mobile-header .site-branding a.brand img.custom-logo,
+body.edrift-hub-landing.security-edrift-modern .site-header .site-branding a.brand img.custom-logo,
+body.edrift-hub-landing.security-edrift-modern .site-mobile-header .site-branding a.brand img.custom-logo,
+body.single-post .site-header .site-branding a.brand img.custom-logo,
+body.single-post .site-mobile-header .site-branding a.brand img.custom-logo {
+	max-width: 140px !important;
+	width: 140px !important;
+	height: auto !important;
+	max-height: none !important;
+	object-fit: contain !important;
+	filter: none !important;
+	opacity: 1 !important;
+}
+
+@media (max-width: 767px) {
+	.site-header .site-branding a.brand img.custom-logo,
+	.site-mobile-header .site-branding a.brand img.custom-logo,
+	body.security-edrift-modern .site-header .site-branding a.brand img.custom-logo,
+	body.security-edrift-modern .site-mobile-header .site-branding a.brand img.custom-logo,
+	body.edrift-hub-landing.security-edrift-modern .site-header .site-branding a.brand img.custom-logo,
+	body.edrift-hub-landing.security-edrift-modern .site-mobile-header .site-branding a.brand img.custom-logo {
+		max-width: 118px !important;
+		width: 118px !important;
+	}
+}
+
+.site-main-header-inner-wrap {
+	min-height: 72px;
+}
+
+/* Legacy reader footer: remove from layout entirely */
+.edrift-reader-footer {
+	display: none !important;
+}
+
+/* Prefer in-content brand footer on hubs/home; quiet Kadence chrome there */
+.home .site-bottom-footer-wrap,
+.page-id-247 .site-bottom-footer-wrap,
+.page-id-837 .site-bottom-footer-wrap,
+.page-id-1006 .site-bottom-footer-wrap,
+.page-id-548 .site-bottom-footer-wrap {
+	display: none !important;
+}
+
+/* GTranslate: park bottom-right, don't cover reading */
+#gt_float_wrapper {
+	top: auto !important;
+	bottom: 1rem !important;
+	right: 0.75rem !important;
+	left: auto !important;
+	z-index: 40 !important;
+}
+
+/* If old atmos markup remains, neutralize glow spectacle */
+.edrift-atmos__glow,
+.edrift-atmos__shield,
+.edrift-atmos__shield-core,
+.edrift-atmos__hatch,
+.edrift-atmos__pattern,
+.edrift-atmos__vignette {
+	display: none !important;
+}
+
+.edrift-landing__features {
+	display: none !important;
+}
+
+/* Quiet editorial hero (home) */
+.edrift-hero-simple {
+	position: relative;
+	overflow: hidden;
+	min-height: clamp(18rem, 44vh, 24rem);
+	margin: 0 0 2rem;
+	color: #f7faf9;
+	background-color: #10242c;
+}
+
+.edrift-hero-simple::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-image: var(--edrift-hero-image);
+	background-size: cover;
+	background-position: center 28%;
+	opacity: 0.38;
+}
+
+.edrift-hero-simple::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(105deg, rgba(12, 28, 34, 0.92) 0%, rgba(12, 28, 34, 0.78) 48%, rgba(12, 28, 34, 0.35) 100%),
+		linear-gradient(0deg, rgba(12, 28, 34, 0.45), transparent 42%);
+}
+
+.edrift-hero-simple__inner {
+	position: relative;
+	z-index: 1;
+	max-width: 36rem;
+	padding: clamp(1.75rem, 4.5vw, 2.75rem) clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.edrift-hero-simple__brand {
+	margin: 0 0 0.15rem;
+	font-family: "DM Sans", system-ui, sans-serif;
+	font-size: clamp(1.85rem, 4.2vw, 2.35rem);
+	font-weight: 700;
+	line-height: 1.05;
+	letter-spacing: -0.02em;
+}
+
+.edrift-hero-simple__brand span {
+	display: block;
+}
+
+.edrift-hero-simple__tag {
+	margin: 0 0 1rem;
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: rgba(247, 250, 249, 0.68);
+}
+
+.edrift-hero-simple__headline {
+	margin: 0 0 0.65rem;
+	font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+	font-weight: 500;
+	line-height: 1.35;
+	color: rgba(247, 250, 249, 0.95);
+}
+
+.edrift-hero-simple__lede {
+	margin: 0;
+	max-width: 31rem;
+	font-size: 1rem;
+	line-height: 1.58;
+	color: rgba(247, 250, 249, 0.78);
+}
+
+.edrift-hero-simple__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	margin: 1.2rem 0 0;
+}
+
+/* Inner page product hero — page job first, no brand restamp */
+.edrift-product-hero {
+	margin: 0 0 1.5rem;
+	padding: 0.25rem 0 1.5rem;
+	border-bottom: 1px solid rgba(28, 36, 40, 0.09);
+	max-width: 40rem;
+}
+
+.edrift-product-hero__title {
+	display: block;
+	font-family: "Lora", Georgia, serif;
+	font-size: clamp(1.7rem, 3.5vw, 2.15rem);
+	font-weight: 600;
+	line-height: 1.15;
+	letter-spacing: -0.02em;
+	margin: 0 0 0.55rem;
+	color: #1c2428;
+}
+
+.edrift-product-hero__lede {
+	margin: 0;
+	font-size: 1.05rem;
+	line-height: 1.58;
+	color: #5f6b73;
+	max-width: 38rem;
+}
+
+.edrift-product-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem 1rem;
+	margin: 1rem 0 0;
+}
+
+/* Soft buttons used on quiet pages */
+.edrift-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.35rem;
+	min-height: 2.75rem;
+	padding: 0.65rem 1.2rem;
+	font-family: "DM Sans", system-ui, sans-serif;
+	font-size: 0.9375rem;
+	font-weight: 600;
+	line-height: 1.2;
+	text-decoration: none;
+	border-radius: 8px;
+	transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.edrift-btn--primary {
+	background: #f7faf9;
+	color: #12323c !important;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+}
+
+.edrift-btn--primary:hover {
+	background: #fff;
+	color: #0f2c38 !important;
+}
+
+.edrift-btn--ghost {
+	background: rgba(255, 255, 255, 0.08);
+	color: #f7faf9 !important;
+	border: 1px solid rgba(247, 250, 249, 0.3);
+}
+
+.edrift-btn--ghost:hover {
+	background: rgba(255, 255, 255, 0.16);
+	color: #fff !important;
+}
+
+.edrift-btn--soft {
+	background: rgba(42, 111, 127, 0.1);
+	color: #1f5563;
+	border: 0;
+}
+
+.edrift-btn--soft:hover {
+	background: #2a6f7f;
+	color: #fff;
+}
+
+.edrift-text-link {
+	font-weight: 600;
+	text-decoration: none;
+	color: #2a6f7f;
+}
+
+.edrift-text-link:hover {
+	text-decoration: underline;
+	color: #1f5563;
+}
+
+@media (max-width: 719px) {
+	.edrift-hero-simple {
+		min-height: 17.5rem;
+	}
+
+	.edrift-hero-simple__actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.edrift-hero-simple__actions .edrift-btn {
+		width: 100%;
+	}
+
+	.edrift-product-hero__actions {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.edrift-product-hero__actions .edrift-btn {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.edrift-hero-simple__inner {
+		animation: edrift-hero-in 0.65s ease-out both;
+	}
+}
+
+@keyframes edrift-hero-in {
+	from { opacity: 0; transform: translateY(8px); }
+	to { opacity: 1; transform: translateY(0); }
+}

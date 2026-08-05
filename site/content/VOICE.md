@@ -4,15 +4,17 @@ Source-of-truth HTML lives in `site/content/voice/`.
 
 ## Voice
 
-Author voice (locked): [`VOICE-CARD.md`](./VOICE-CARD.md) (grilling, Aug 2026).  
-Use that card for all new and revised blog copy. If it isn’t James’s style and vision, it doesn’t go live.
+Author voice (locked): [`VOICE-CARD.md`](./VOICE-CARD.md) — James Lugton profile (Aug 2026).  
+Mission: cut through the noise; steady, honest, real-world graft. No hype, no scare stories.  
+Audience: technically curious readers, IT pros, security teams and business leaders — clear, calm, no faff.  
+If it isn’t that voice, it doesn’t go live.
 
 **Voice-card revamp (Aug 2026):** flagship hubs + **all non-story posts** under `site/content/voice/revamp/`.  
 Story chapters (Jim’s shop / river) left alone.  
 Deploy all: `WP_API_TOKEN=… python3 scripts/revamp-voice-all.py`  
 Deploy first wave only: `WP_API_TOKEN=… python3 scripts/revamp-voice.py`
 
-Short reminder: calm UK-plain for non-technical readers; sharp only at the click/transfer moment; jargon as plain action then `(mfa)`; empower with a self-check, not a sales ending. Remove conversion hype, repetition, unsupported claims, and stock AI-blog filler.
+Short reminder: accuracy over speed; practical over clever; explain *why*; trust not fear; human judgement stays essential. Stop/Pause at click moments. Kill corporate filler and scare copy.
 
 Deploy older demarket pass: `WP_API_TOKEN=… python3 scripts/demarket-voice.py`
 

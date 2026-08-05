@@ -13,13 +13,13 @@ Avoid `e-drift` in titles/UI (URLs/slugs may stay kebab-case).
 
 ## Supporting line
 
-> Clear guidance for UK homes and small teams. Scams, AI habits, and everyday security — without the jargon or the fear.
+> Straight answers on AI, cybersecurity and tech — steady, honest, no hype and no scare stories.
 
 ## Voice
 
-Calm, specific, UK-plain. One memorable rule beats ten tips. Never sell fear.
+Calm authority, lived-in, Yorkshire “I’ll tell you straight.” Practical wisdom over theatre. Jargon only when it earns its keep. Never sell fear.
 
-Author voice (locked): `site/content/VOICE-CARD.md` — non-technical readers, stop/pause checks at risk moments, plain words before jargon, self-check endings, no mid-article Lugton sell.
+**Locked author card:** `site/content/VOICE-CARD.md` (James Lugton — cybersecurity analyst and technology writer).
 
 See `site/positioning.md` for niche product strategy.
 

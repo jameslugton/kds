@@ -1,145 +1,145 @@
 <!-- wp:block {"ref":572} /-->
 
 <!-- wp:paragraph -->
-<p>When customers shop online, they’re trusting you with personal information. Every click, every payment, every saved detail is part of a growing digital trail. Behind the scenes, your website is constantly moving data, running scripts, and facing new risks.</p>
+<p>Checkout is where trust meets code. Your customer sees a payment form; behind that page, scripts handle shipping, analytics, chat widgets, and the handoff to Stripe or PayPal. Most of that is ordinary. The risk is the part you rarely inspect: JavaScript loading in the browser that can read card fields before the payment ever reaches your processor.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>That is e-skimming — often grouped under the label Magecart. The attack lives on your checkout page, not necessarily in server logs your host shows you. Firewalls and antivirus on the till PC will not see it.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 class="wp-block-heading">The invisible flow of data</h2>
+<h2 class="wp-block-heading">What your checkout page actually does</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Most people don’t see what’s happening when they enter card details. But your website does a lot:</p>
+<p>When someone pays, your site typically:</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
-<li>It sends payment info to processors</li>
+<li>Sends payment details to your processor — hosted page or embedded form</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>It stores customer details (sometimes temporarily)</li>
+<li>Stores order details, sometimes briefly</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>It runs scripts to handle checkout, shipping, and tracking</li>
+<li>Runs third-party scripts for tracking, chat, reviews, and theme features</li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p>If any part of that process is weak, attackers can sneak in. A single vulnerable file or outdated plugin can open the door to serious trouble.</p>
+<p>Any weak link — an outdated plugin, a compromised admin login, a script someone installed and forgot — gives an attacker room to add skimming code. I have seen shops lose weeks of card data that way and only find out from chargebacks.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 class="wp-block-heading">The risk you don’t see</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Cyber threats aren’t always loud or obvious. Some hide in plain sight:</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:list -->
-<ul class="wp-block-list"><!-- wp:list-item -->
-<li>Hidden code can quietly steal card numbers during checkout — this is called e-skimming or Magecart-style skimming</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Old software can be exploited to gain access</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Unprotected data can be intercepted or copied</li>
-<!-- /wp:list-item --></ul>
-<!-- /wp:list -->
-
-<!-- wp:paragraph -->
-<p>Once attackers are in, they can do more than steal — they can deface your site, damage your brand, or install code that spreads the attack to your customers.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Security is never “set and forget”</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Protecting your business isn’t a one-time task. It’s a constant process of checking, updating, and improving. You need to:</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:list -->
-<ul class="wp-block-list"><!-- wp:list-item -->
-<li>Review your systems regularly</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Update plugins, themes, and software</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Scan for suspicious activity — especially scripts loading on checkout pages</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>Train your team to spot red flags</li>
-<!-- /wp:list-item --></ul>
-<!-- /wp:list -->
-
-<!-- wp:paragraph -->
-<p>Think of it like cleaning a kitchen. If you don’t check under the fridge, you won’t see what’s growing there.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading -->
-<h2 class="wp-block-heading">What to do when things go wrong</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Even with strong defences, things can go wrong. Every business needs a crisis plan — a clear guide for what to do if something breaks.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:list -->
-<ul class="wp-block-list"><!-- wp:list-item -->
-<li>Who to contact (tech support, legal, customers)</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>How to contain the damage (shut down affected systems)</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>How to investigate (figure out what happened)</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li>How to recover (restore services and rebuild trust)</li>
-<!-- /wp:list-item --></ul>
-<!-- /wp:list -->
-
-<!-- wp:paragraph -->
-<p>The faster you act, the better your chances of limiting the damage.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Building resilience</h2>
+<h2 class="wp-block-heading">The risks that do not shout</h2>
 <!-- /wp:heading -->
 
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
-<li><strong>Separate sensitive systems:</strong> keep payment tools isolated from other parts of your site</li>
+<li>Hidden JavaScript that copies card numbers as they are typed — e-skimming or Magecart-style skimming</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><strong>Use secure backups:</strong> so you can restore quickly if something goes wrong</li>
+<li>Old plugins or themes with known flaws</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><strong>Monitor everything:</strong> use tools that alert you to strange behaviour on checkout pages</li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li><strong>Test your defences:</strong> run drills. Make sure your team knows what to do.</li>
+<li>Data intercepted because HTTPS is missing or misconfigured</li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p><strong>Stop! Pause!</strong> Before you install a new plugin or paste tracking code on checkout: Is it urgent? Do you know who wrote it? Is it really from a source you trust? If not sure — leave it off the payment page until you’ve checked.</p>
+<p>Once rogue code is on the page, attackers can skim cards, deface the site, or redirect customers. The skim is often the quiet one — orders still go through until the bank calls.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Ongoing work, not a one-off tick</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Protecting checkout is maintenance, not a project you finish:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Review what runs on checkout — not just the homepage</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Update plugins, themes, and core; remove what you do not use</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Watch for new scripts after a plugin install or agency handover</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Brief staff: odd checkout behaviour or duplicate charge reports go straight to whoever owns the site</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>If you only look when you remember, you will miss what changed last Tuesday.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">When something goes wrong</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Even with decent habits, write down the basics before you need them:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Who to call — host, developer, payment provider, insurer</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>How to take checkout offline quickly</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>How to find out what changed and when</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>How to restore from backup and tell customers if you must</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Speed limits damage. A one-page note beats improvising at midnight.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Practical steps worth the effort</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Keep payment flows tidy:</strong> fewer scripts on checkout means fewer places for skimmers to hide</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Backups you have restored:</strong> a cloud folder you never tested is not a plan</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Monitor checkout scripts:</strong> alerts or script monitoring catch changes you would not spot by eye</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Know who holds the keys:</strong> who updates plugins, who has admin access, what is the out-of-hours number</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><strong>Stop! Pause!</strong> Before you install a new plugin or paste tracking code on checkout: Is it urgent? Do you know who wrote it? Is it really from a source you trust? If not sure — leave it off the payment page until you have checked.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -151,5 +151,5 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>When did you last update your website plugins — and when did you last look at what scripts load on your checkout page? If both answers are “can’t remember,” pick one to do this week. Your customers notice trust; they rarely notice a quiet skim until it’s too late.</p>
+<p>When did you last update your website plugins — and when did you last look at what scripts load on your checkout page specifically? If both answers are “cannot remember,” pick one to do this week. Chargebacks are how most small shops learn about a quiet skim.</p>
 <!-- /wp:paragraph -->

@@ -1,23 +1,23 @@
 <!-- wp:block {"ref":572} /-->
 
 <!-- wp:paragraph -->
-<p>If you sell online or take payments over the phone, you’ve probably heard “be PCI compliant.” But what does that actually mean — and why is everyone talking about PCI DSS 4.0.1?</p>
+<p>If you sell online or take card payments by phone, your payment provider will ask about PCI DSS. That is the Payment Card Industry Data Security Standard — the shared rules for keeping card data safe. Version 4.0.1 is what most small businesses need to know about now.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>You don’t need to be a specialist to understand your bit of the work.</p>
+<p>You do not need to be a compliance specialist to understand your bit of the work — which questionnaire applies, what your host and processor handle, and what you still need to maintain year-round.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 class="wp-block-heading">What is PCI DSS — and why should you care?</h2>
+<h2 class="wp-block-heading">What PCI DSS is — and why it matters</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>PCI DSS is the Payment Card Industry Data Security Standard — a global set of rules designed to protect credit card data.</p>
+<p>PCI DSS sets minimum controls for anyone who accepts card payments online, by phone, or in person. It is not optional if you take cards.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>If you accept credit or debit card payments online, by phone, or in person, you must follow PCI DSS. It’s not optional. Ignoring it can lead to:</p>
+<p>Ignore it and you risk:</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->
@@ -35,20 +35,20 @@
 <!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p>Compliance keeps your business secure and trustworthy — and stops fraud and breaches that harm both your finances and your reputation.</p>
+<p>The point is not box-ticking for its own sake. The rules exist because card fraud and breaches hurt merchants and customers alike — and because processors need evidence that you are doing your share.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 class="wp-block-heading">What’s new in PCI DSS 4.0.1</h2>
+<h2 class="wp-block-heading">What changed in PCI DSS 4.0.1</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>The latest update introduces important changes, especially for small businesses:</p>
+<p>The latest update matters for small businesses in three practical ways:</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
-<li>More flexibility in how businesses implement security measures</li>
+<li>More flexibility in how you implement some security measures — but you still need to show they work</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
@@ -56,20 +56,20 @@
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>Clearer shared responsibilities if you use third-party tools like payment processors or cloud services</li>
+<li>Clearer shared responsibilities when you use third-party tools — payment processors, hosted checkout, cloud services</li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p>For business owners, this means a shift from ticking a box once a year to actively maintaining security year-round.</p>
+<p>In plain terms: less “file the form in January and forget it,” more “keep checkout, admin access, and scans in reasonable shape all year.”</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 class="wp-block-heading">What’s an SAQ, and which one do you need?</h2>
+<h2 class="wp-block-heading">What is an SAQ, and which one do you need?</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>A Self-Assessment Questionnaire (SAQ) is a form you fill out each year to confirm you’re PCI compliant. Which SAQ applies depends on how you accept card payments.</p>
+<p>An annual self-assessment questionnaire (SAQ) is the form most small merchants complete to confirm PCI compliance. Which SAQ applies depends on how you accept card payments — not on how big your turnover is.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -78,11 +78,11 @@
 
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
-<li>If you only accept payments online and use a third-party service (like Nochex, Stripe, or PayPal), SAQ A applies.</li>
+<li>If you only accept payments online through a third-party service (Nochex, Stripe, PayPal, and similar), SAQ A usually applies.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li>You don’t store, process, or transmit cardholder data directly — your payment provider does.</li>
+<li>You do not store, process, or transmit cardholder data directly — your payment provider does.</li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
@@ -92,7 +92,7 @@
 
 <!-- wp:list -->
 <ul class="wp-block-list"><!-- wp:list-item -->
-<li>If you take payments over the phone and enter card details into a virtual terminal (like PayPal Virtual Terminal or Stripe), SAQ C-VT applies.</li>
+<li>If you take payments over the phone and enter card details into a virtual terminal (PayPal Virtual Terminal, Stripe, and similar), SAQ C-VT applies.</li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
@@ -101,15 +101,15 @@
 <!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p>Choosing the correct SAQ matters — filling out the wrong one can delay compliance or lead to higher fees.</p>
+<p>Choosing the correct SAQ matters. The wrong form delays compliance, wastes time, and can lead to higher fees or processor pushback.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 class="wp-block-heading">How to meet SAQ A &amp; SAQ C-VT</h2>
+<h2 class="wp-block-heading">How to meet SAQ A and SAQ C-VT</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Once you know which SAQ applies, here’s how to meet compliance through the core PCI DSS security requirements.</p>
+<p>Once you know which SAQ applies, here is how the core PCI DSS requirements usually land for small businesses.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -130,7 +130,7 @@
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><strong>Encrypt data in transit.</strong> Your site needs an active SSL/TLS certificate. Use HTTPS so data can’t be intercepted on the way.</li>
+<li><strong>Encrypt data in transit.</strong> Your site needs an active SSL/TLS certificate. Use HTTPS so data cannot be intercepted on the way.</li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
@@ -221,5 +221,5 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Do you know which SAQ applies to your business — A for hosted checkout, or C-VT for phone payments? If you’re not sure, ask your payment provider before your next renewal. Getting the wrong form is an easy mistake with an expensive fix.</p>
+<p>Do you know which SAQ applies to your business — A for hosted checkout, or C-VT for phone payments? If you are not sure, ask your payment provider before your next renewal. Getting the wrong form is an easy mistake with an expensive fix.</p>
 <!-- /wp:paragraph -->

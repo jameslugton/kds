@@ -7,8 +7,10 @@ Source-of-truth HTML lives in `site/content/voice/`.
 Author voice (locked): [`VOICE-CARD.md`](./VOICE-CARD.md) (grilling, Aug 2026).  
 Use that card for all new and revised blog copy. If it isn’t James’s style and vision, it doesn’t go live.
 
-**Voice-card revamp (Aug 2026):** flagship hubs + core how-tos under `site/content/voice/` and `site/content/voice/revamp/`.  
-Deploy: `WP_API_TOKEN=… python3 scripts/revamp-voice.py`
+**Voice-card revamp (Aug 2026):** flagship hubs + **all non-story posts** under `site/content/voice/revamp/`.  
+Story chapters (Jim’s shop / river) left alone.  
+Deploy all: `WP_API_TOKEN=… python3 scripts/revamp-voice-all.py`  
+Deploy first wave only: `WP_API_TOKEN=… python3 scripts/revamp-voice.py`
 
 Short reminder: calm UK-plain for non-technical readers; sharp only at the click/transfer moment; jargon as plain action then `(mfa)`; empower with a self-check, not a sales ending. Remove conversion hype, repetition, unsupported claims, and stock AI-blog filler.
 

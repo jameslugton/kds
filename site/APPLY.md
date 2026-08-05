@@ -99,3 +99,15 @@ Child theme path: `wp-content/themes/security-edrift/` (not writable via MCP —
 - Privacy page shows **Last updated: 30 July 2026**.
 - Subscribe form includes honeypot field `company` (hidden).
 - `curl -sI https://blog.lugton.co.uk/wp-json/easy-mcp-ai/v1/mcp` still returns **401** without a token.
+
+## Editorial voice pass
+
+Calm the conversion/hype language while keeping brand tone:
+
+```bash
+export WP_API_TOKEN='…'
+python3 scripts/demarket-voice.py --local-only   # edit site/content/voice/*
+# then deploy pages/posts via the same script without --local-only, or MCP update
+```
+
+See `site/content/VOICE.md`.

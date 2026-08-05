@@ -4,11 +4,11 @@
 
 Calm cybersecurity for UK homes and small teams.
 
-Not threat theatre. Not enterprise compliance theatre. A readable field guide for people who make real decisions under ordinary pressure.
+A readable field guide for people who make real decisions under ordinary pressure — not threat theatre, and not enterprise compliance theatre.
 
 ## Promise
 
-**Stay calm. Stay sharp. Spot the quiet compromise before it becomes a bad week.**
+**Stay calm. Stay sharp. Spot the quiet compromise while the fix is still ordinary.**
 
 ## Who it is for
 

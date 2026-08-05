@@ -3,8 +3,11 @@
 Source-of-truth HTML lives in `site/content/voice/`.
 
 ## Voice
-Keep Security e-Drift’s calm UK-plain tone; remove conversion hype, repetition,
-unsupported claims, and stock AI-blog filler.
+
+**Locked author voice:** [`VOICE-CARD.md`](./VOICE-CARD.md) (grilling, Aug 2026).  
+Use that card for all new and revised blog copy. If it isn’t James’s style and vision, it doesn’t go live.
+
+Short reminder: calm UK-plain for non-technical readers; sharp only at the click/transfer moment; jargon as plain action then `(mfa)`; empower with a self-check, not a sales ending. Remove conversion hype, repetition, unsupported claims, and stock AI-blog filler.
 
 Deploy voice: `WP_API_TOKEN=… python3 scripts/demarket-voice.py`
 

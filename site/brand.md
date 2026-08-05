@@ -19,6 +19,8 @@ Avoid `e-drift` in titles/UI (URLs/slugs may stay kebab-case).
 
 Calm, specific, UK-plain. One memorable rule beats ten tips. Never sell fear.
 
+Author voice (locked): `site/content/VOICE-CARD.md` — non-technical readers, stop/pause checks at risk moments, plain words before jargon, self-check endings, no mid-article Lugton sell.
+
 See `site/positioning.md` for niche product strategy.
 
 ## Blog vs services

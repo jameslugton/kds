@@ -17,3 +17,13 @@ Deploy design: `WP_API_TOKEN=… python3 scripts/fix-design.py`
 
 Also append `edrift-design-fixes.css` into live `assets/edrift.css` via SFTP when possible
 (theme PHP may still add `body.edrift-hub-landing` on some page IDs; the fixes neutralize it).
+
+## Humanize pass (AI-style cleanup)
+
+Detector note: polished editorial can still score “AI-assisted.” We strip stock tells
+(emoji headers, “Remember this / A habit to keep” templates, “Final Thoughts”,
+ever-evolving openers) and rewrite the worst older posts in plain Yorkshire-blog voice.
+
+Deploy: `WP_API_TOKEN=… python3 scripts/humanize-content.py`
+
+Story chapters (Jim’s shop / river) were left alone — they already read human.
